@@ -26,11 +26,11 @@ function App() {
         </div>
       </div>
 
-      <div>
+      <div className="flex flex-col justify-center text-center m-64">
         <div className="m-5">
-          <p>imagine what you'll create</p>
-          <p className="serif">
-            this fall, Hack Club is running its biggest hackathon yet: a game
+          <p className="mb-6 text-4xl">imagine what you'll create</p>
+          <p className="serif text-lg max-w-lg mx-auto">
+            This fall, Hack Club is running its biggest hackathon yet: a game
             jam where over 5k teens across 250 locations will come together for
             12-24 hours to make games together.
           </p>
