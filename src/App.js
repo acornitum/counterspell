@@ -3,10 +3,15 @@ import './App.css';
 function App() {
   return (
     <div>
-      <div className="flex flex-col justify-center">
+      <div class="landing" className="flex flex-col justify-center h-screen 100vh">
         <div className="text-center">
-          <h1>Counterspell</h1>
+          <p className="text-6xl">Counterspell</p>
+          <p className="text-xl">Join 5000+ students in any of 250+ locations to create a game</p>
         </div>
+      </div>
+
+      <div>
+        
         
       </div>
       
