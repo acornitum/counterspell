@@ -49,10 +49,7 @@ function App() {
         </div>
       </div>
 
-      <div class="faq">
-
-      </div>
-
+      <div class="faq"></div>
     </div>
   );
 }
