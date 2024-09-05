@@ -12,8 +12,8 @@ function App() {
         }}
       >
         <div className="text-center">
-          <p className="text-8xl mb-12 text-green">Counterspell</p>
-          <p className="text-3xl serif mb-4">
+          <p className="text-5xl mb-12 text-green">Counterspell</p>
+          <p className="text-2xl serif mb-4 mx-4">
             Join 5000+ students in any of 250+ locations to create games
           </p>
 
@@ -26,7 +26,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center text-center m-64">
+      <div className="flex flex-col justify-center text-center my-64">
         <div className="m-5">
           <p className="mb-6 text-4xl">imagine what you'll create</p>
           <p className="serif text-lg max-w-lg mx-auto">
@@ -37,19 +37,32 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center text-center">
+      <div className="flex flex-col justify-center text-center mb-24">
         <div className="m-5">
           <p className="mb-6 text-4xl">how to play</p>
-          <div className="border-4 rounded-lg border-lightpurp flex items-center justify-center p-10">
-            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
-            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
-            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
-            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
+          <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10">
+            <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
           </div>
         </div>
       </div>
 
-      <div class="faq"></div>
+      <div class="faq" className="flex flex-col justify-center text-center">
+        <div className="m-5">
+          <p className="mb-6 text-4xl">frequently asked questions</p>
+          <div className="flex items-center justify-center p-5">
+            <div className="bg-darkpurp rounded-lg p-5">
+              <p>question! question!</p>
+              <p>answer! answer!</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }
