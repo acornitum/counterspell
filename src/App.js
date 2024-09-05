@@ -12,7 +12,7 @@ function App() {
         }}
       >
         <div className="text-center">
-          <p className="text-8xl mb-12 text-green">COUNTERSPELL</p>
+          <p className="text-8xl mb-12 text-mag">COUNTERSPELL</p>
           <p className="text-3xl inter mb-4 mx-4">
             Join 5000+ students in any of 250+ locations to create games
           </p>
