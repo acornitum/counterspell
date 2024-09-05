@@ -12,8 +12,8 @@ function App() {
         }}
       >
         <div className="text-center">
-          <p className="text-5xl mb-12 text-green">Counterspell</p>
-          <p className="text-2xl serif mb-4 mx-4">
+          <p className="text-8xl mb-12 text-green">COUNTERSPELL</p>
+          <p className="text-3xl serif mb-4 mx-4">
             Join 5000+ students in any of 250+ locations to create games
           </p>
 
@@ -40,7 +40,7 @@ function App() {
       <div className="flex flex-col justify-center text-center mb-24">
         <div className="m-5">
           <p className="mb-6 text-4xl">how to play</p>
-          <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10 m-16">
+          <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10 m-16 serif">
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
@@ -52,7 +52,7 @@ function App() {
       <div class="faq" className="flex flex-col justify-center text-center">
         <div className="m-5">
           <p className="mb-6 text-4xl">frequently asked questions</p>
-          <div className="flex items-center justify-center p-5">
+          <div className="flex items-center justify-center p-5 serif">
             <div className="bg-darkpurp rounded-lg p-5">
               <p>question! question!</p>
               <p>answer! answer!</p>
