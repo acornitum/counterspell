@@ -12,7 +12,7 @@ function App() {
         }}
       >
         <div className="text-center">
-          <p className="text-8xl mb-4 text-green">Counterspell</p>
+          <p className="text-8xl mb-12 text-green">Counterspell</p>
           <p className="text-3xl serif mb-4">
             Join 5000+ students in any of 250+ locations to create games
           </p>
@@ -36,6 +36,23 @@ function App() {
           </p>
         </div>
       </div>
+
+      <div className="flex flex-col justify-center text-center">
+        <div className="m-5">
+          <p className="mb-6 text-4xl">how to play</p>
+          <div className="border-4 rounded-lg border-lightpurp flex items-center justify-center p-10">
+            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
+            <div className="bg-darkpurp rounded-lg m-4 w-64 h-96">fdfs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq">
+
+      </div>
+
     </div>
   );
 }
