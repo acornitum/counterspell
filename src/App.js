@@ -40,7 +40,7 @@ function App() {
       <div className="flex flex-col justify-center text-center mb-24">
         <div className="m-5">
           <p className="mb-6 text-4xl">how to play</p>
-          <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10">
+          <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10 m-16">
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
             <div className="bg-darkpurp rounded-lg m-4 p-5">fdfs</div>
