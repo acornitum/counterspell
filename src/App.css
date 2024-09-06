@@ -50,9 +50,11 @@ li {
     list-style-type: circle;
  }
 
-.wisps {
-  position: fixed;
-  bottom: 0;
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  z-index: -1; /* Ensure it is below other content */
 }

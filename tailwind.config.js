@@ -8,7 +8,8 @@ module.exports = {
         mag: '#D046D6',
         blue: '#5BE2FA',
         lightpurp: '#6370F5',
-        darkpurp: '#443D87'
+        darkpurp: '#443D87',
+        dark: '#0A081E'
       }
     },
   },

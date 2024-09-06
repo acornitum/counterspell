@@ -11,7 +11,7 @@
       "value": ["#D046D6", "#5BE2FA"]
     },
     "shape": {
-      "type": "square"
+      "type": ["square"]
     },
     "opacity": {
       "value": 1,
