@@ -1,41 +1,35 @@
 import "./App.css";
-import React, {useEffect, useState} from "react";
-import Particles, {initParticlesEngine} from "@tsparticles/react";
-import {loadFull} from "tsparticles";
+import React, { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
-
 
 export default function App() {
   const [init, setInit] = useState(false);
 
-    useEffect(() => {
-        if (init) {
-            return;
-        }
+  useEffect(() => {
+    if (init) {
+      return;
+    }
 
-        initParticlesEngine(async (engine) => {
-            await loadFull(engine);
-        }).then(() => {
-            setInit(true);
-        });
-    }, []);
+    initParticlesEngine(async (engine) => {
+      await loadFull(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
   return (
     <div>
-
-{init && <Particles options={particlesOptions}/>}
+      {init && <Particles options={particlesOptions} />}
       <div
         class="landing"
         className="flex flex-col justify-center h-screen"
-        style={{
-
-        }}
+        style={{}}
       >
-        
         <div className="text-center">
           <p className="text-8xl mb-4 text-mag">COUNTERSPELL</p>
           <p className="text-3xl inter mb-4 mx-4">
             Join 5000+ students in any of 250+ locations to create games
-            
           </p>
 
           <div className="flex items-center justify-center">
@@ -93,7 +87,7 @@ export default function App() {
               answer="If you're 18 or under, yes, we are so excited to see you! If you're over 18 but still in high school, shoot us an email at counterspell@hackclub.com."
             />
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   );

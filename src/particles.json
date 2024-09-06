@@ -1,4 +1,36 @@
 {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": ["#D046D6", "#5BE2FA"]
+    },
+    "shape": {
+      "type": "square"
+    },
+    "opacity": {
+      "value": 1,
+      "random": true
+    },
+    "size": {
+      "value": 5,
+      "random": true
+    },
+    "move": {
+      "enable": true,
+      "speed": 10,
+      "direction": "top-left",
+      "straight": false,
+      "outModes": {
+        "default": "out"
+      }
+    }
+  },
   "interactivity": {
     "events": {
       "onClick": {
@@ -21,45 +53,5 @@
       }
     }
   },
-  "particles": {
-    "color": {
-      "value": "#ffffff"
-    },
-    "links": {
-      "color": "#ffffff",
-      "distance": 150,
-      "enable": true,
-      "opacity": 0.5,
-      "width": 1
-    },
-    "collisions": {
-      "enable": true
-    },
-    "move": {
-      "direction": "none",
-      "enable": true,
-      "outModes": {
-        "default": "bounce"
-      },
-      "random": false,
-      "speed": 6,
-      "straight": false
-    },
-    "number": {
-      "density": {
-        "enable": true
-      },
-      "value": 80
-    },
-    "opacity": {
-      "value": 0.5
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "size": {
-      "random": true,
-      "value": 5
-    }
-  }
+  "detectRetina": true
 }
