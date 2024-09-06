@@ -1,20 +1,41 @@
 import "./App.css";
+import React, {useEffect, useState} from "react";
+import Particles, {initParticlesEngine} from "@tsparticles/react";
+import {loadFull} from "tsparticles";
+import particlesOptions from "./particles.json";
+
 
 export default function App() {
+  const [init, setInit] = useState(false);
+
+    useEffect(() => {
+        if (init) {
+            return;
+        }
+
+        initParticlesEngine(async (engine) => {
+            await loadFull(engine);
+        }).then(() => {
+            setInit(true);
+        });
+    }, []);
   return (
     <div>
+
+{init && <Particles options={particlesOptions}/>}
       <div
         class="landing"
         className="flex flex-col justify-center h-screen"
         style={{
-          background:
-            "linear-gradient(to bottom, #100F21, #100F21, #100F21, #443D87)",
+
         }}
       >
+        
         <div className="text-center">
           <p className="text-8xl mb-4 text-mag">COUNTERSPELL</p>
           <p className="text-3xl inter mb-4 mx-4">
             Join 5000+ students in any of 250+ locations to create games
+            
           </p>
 
           <div className="flex items-center justify-center">
