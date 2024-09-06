@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
+import { Tilt } from '@jdion/tilt-react'
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -141,12 +142,12 @@ const Faq = ({ question, answer }) => {
   );
 };
 
-function Cards() {
+const Cards = () => {
   return(
     <div className="flex flex-wrap justify-center">
-      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
-      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
-      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
+      <Tilt className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></Tilt>
+      <Tilt className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></Tilt>
+      <Tilt className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></Tilt>
 
     </div>
   );
