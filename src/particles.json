@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 200,
       "density": {
         "enable": true,
         "value_area": 800
@@ -14,7 +14,7 @@
       "type": ["square"]
     },
     "opacity": {
-      "value": 1,
+      "value": 0.5,
       "random": true
     },
     "size": {
@@ -23,7 +23,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 10,
+      "speed": 8,
       "direction": "top-left",
       "straight": false,
       "outModes": {
@@ -48,7 +48,7 @@
         "quantity": 4
       },
       "repulse": {
-        "distance": 200,
+        "distance": 100,
         "duration": 0.4
       }
     }

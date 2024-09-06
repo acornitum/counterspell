@@ -53,7 +53,8 @@ export default function App() {
         <p className="text-3xl">
           This is a <span className="text-blue">game jam</span> where you can
         </p>
-        <p className="text-3xl">choose your own adventure</p>
+        <p className="text-3xl mb-8">choose your own adventure</p>
+        <Cards />
       </div>
 
       <div className="flex flex-col justify-center text-center my-64">
@@ -134,8 +135,19 @@ const Howtoplay = ({ ins }) => {
 const Faq = ({ question, answer }) => {
   return (
     <div className="bg-darkpurp rounded-lg p-5 max-w-lg m-4">
-      <p className="mb-2">{question}</p>
+      <p className="mb-2 text-xl">{question}</p>
       <p>{answer}</p>
     </div>
   );
 };
+
+function Cards() {
+  return(
+    <div className="flex flex-wrap justify-center">
+      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
+      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
+      <div className="bg-lightpurp rounded-lg p-5 m-4" style={{width: "340px", height: "500px"}}></div>
+
+    </div>
+  );
+}
