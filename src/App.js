@@ -8,6 +8,7 @@ import { Tilt } from "@jdion/tilt-react";
 import billboard from "./art/billboard.png";
 import title from "./art/title.png";
 import background from "./art/background.png";
+import breakline from "./art/breakline.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -68,6 +69,10 @@ export default function App() {
           </p>
           <p className="inter">November 9-10th, 2024 // in-person, worldwide</p>
         </div>
+      </div>
+
+      <div>
+        <img src={breakline}/>
       </div>
 
       <div className="bg-dark border-t-4 border-mag">
