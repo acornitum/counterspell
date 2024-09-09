@@ -5,6 +5,9 @@ import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import { Tilt } from '@jdion/tilt-react'
 
+import title from './art/title.png';
+
+
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -29,19 +32,13 @@ export default function App() {
         className="flex flex-col justify-center h-screen"
         style={{}}
       >
-        <div className="text-center">
-          <p className="text-8xl mb-12 text-mag">COUNTERSPELL</p>
+        <div className="text-center items-center flex flex-col justify-center">
+          <img src={title} alt="Counterspell" style={{width: "60vw", maxWidth: "80%", height: "auto"}} /> 
           <p className="text-3xl inter mb-4 mx-4">
-            Join 5000+ students in any of 250+ locations to create games
+            Hack Club's game jam for high schoolers
           </p>
           <p className="inter">November 9-10th, 2024 // in-person, worldwide</p>
 
-
-          <div className="flex items-center justify-center">
-            <div className="flex items-center justify-center bg-gray-600 w-72 h-10 rounded-lg">
-              <p className="inter">email placeholder</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -52,9 +49,9 @@ export default function App() {
           Calling all hackers, artists, and musicians!
         </p>
         <p className="text-3xl">
-          This is a <span className="text-blue">game jam</span> where you can
+          This is a <span className="text-blue">game jam</span> where you can <span className="text-mag">choose your own adventure</span>
         </p>
-        <p className="text-3xl mb-8">choose your own adventure</p>
+        <p className="text-3xl mb-8"></p>
         <Cards />
       </div>
 
