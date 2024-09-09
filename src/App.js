@@ -5,8 +5,8 @@ import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import { Tilt } from '@jdion/tilt-react'
 
+import billboard from './art/billboard.png'
 import title from './art/title.png';
-
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -32,8 +32,15 @@ export default function App() {
         className="flex flex-col justify-center h-screen"
         style={{}}
       >
-        <div className="text-center items-center flex flex-col justify-center">
-          <img src={title} alt="Counterspell" style={{width: "60vw", maxWidth: "80%", height: "auto"}} /> 
+        <div className="text-center">
+          <div style={{}}>
+            <div className="flex flex-col justify-center items-center relative" style={{width: "50%", height: "auto"}}>
+            <img src={billboard} style={{position: "absolute", width: "100%", height: "auto"}}/>
+            <img src={title} alt="Counterspell" className="absolute" style={{width: "70%", height: "auto", top: "50%", left: "50%", transform: "translate(-50%, -115%)"}} /> 
+          </div>
+          </div>
+          
+          
           <p className="text-3xl inter mb-4 mx-4">
             Hack Club's game jam for high schoolers
           </p>
