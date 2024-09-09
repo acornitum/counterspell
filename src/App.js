@@ -7,6 +7,7 @@ import { Tilt } from "@jdion/tilt-react";
 
 import billboard from "./art/billboard.png";
 import title from "./art/title.png";
+import background from "./art/background.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -24,6 +25,9 @@ export default function App() {
   }, []);
   return (
     <div>
+      <div>
+        <img src={background} className="absolute -z-30" style={{width: "100%"}}/>
+      </div>
       {init && (
         <div className="particles-container">
           <Particles options={particlesOptions} />
@@ -38,7 +42,7 @@ export default function App() {
           <div className="flex justify-center items-cen">
             <div
               className="flex flex-col justify-center items-center relative"
-              style={{ width: "50%", height: "auto" }}
+              style={{ width: "60%", height: "auto" }}
             >
               <img
                 src={billboard}
