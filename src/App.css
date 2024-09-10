@@ -58,3 +58,7 @@ li {
   height: 100%;
   z-index: -1; /* Ensure it is below other content */
 }
+
+a:link {
+  text-decoration: underline;
+}

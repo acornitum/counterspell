@@ -142,9 +142,9 @@ export default function App() {
             <div className="flex justify-center mx-4 my-14">
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
                 <Howtoplay ins="1. find your local hackathon using the event locator below" />
-                <Howtoplay ins="1. find your local hackathon using the event locator below" />
-                <Howtoplay ins="1. find your local hackathon using the event locator below" />
-                <Howtoplay ins="1. find your local hackathon using the event locator below" />
+                <Howtoplay ins="2. find a team of other high school students" />
+                <Howtoplay ins="3. build a game from scratch that weekend" />
+                <Howtoplay ins="4. show off your project!" />
               </div>
             </div>
           </div>
@@ -159,6 +159,11 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      <div className="flex justify-center items-center mt-4 p-6 bg-darkpurp text-lg">
+        <a href="https://hackclub.com" className="mx-4">Hack Club</a> | <a href="https://hackclub.com/slack/" className="mx-4">Slack</a> | <a href="https://www.instagram.com/starthackclub/" className="mx-4">Instagram</a>
+      </div>
+
     </div>
   );
 }
