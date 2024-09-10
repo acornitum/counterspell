@@ -12,6 +12,7 @@ import background from "./art/background.png";
 import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
+import smoke from "./art/smoke.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -47,9 +48,9 @@ export default function App() {
         style={{}}
       >
         <div className="text-center">
-          <div className="flex justify-center items-cen">
+          <div className="flex justify-center items-cen" style={{maxWidth: "100%", height: "auto"}}>
             <div
-              className="flex flex-col justify-center items-center relative mt-52"
+              className="flex flex-col justify-center items-center relative"
               style={{ width: "60%", height: "auto" }}
             >
               <img
@@ -66,6 +67,18 @@ export default function App() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -115%)",
+                }}
+              />
+              <img
+                src={smoke}
+                alt="Counterspell"
+                className="absolute"
+                style={{
+                  width: "80%",
+                  height: "auto",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-35%, -200%)",
                 }}
               />
               <img 
