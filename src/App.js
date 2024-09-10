@@ -11,6 +11,7 @@ import title from "./art/title.png";
 import background from "./art/background.png";
 import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
+import aboutbkgr from "./art/aboutbkgr.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -108,6 +109,11 @@ export default function App() {
 
         <div className="flex flex-col justify-center text-center my-64">
           <div className="m-5">
+            <img 
+            src={aboutbkgr}
+            className="absolute"
+            
+            />
             <p className="mb-6 text-4xl">imagine what you'll create</p>
             <p className="inter text-lg max-w-lg mx-auto">
               This fall, Hack Club is running its biggest hackathon yet: a game
