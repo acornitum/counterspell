@@ -10,6 +10,7 @@ import billboard from "./art/billboard.png";
 import title from "./art/title.png";
 import background from "./art/background.png";
 import breakline from "./art/breakline.png";
+import sparks from "./art/sparks.gif";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -41,13 +42,13 @@ export default function App() {
       )}
       <div
         class="landing"
-        className="flex flex-col justify-center h-screen"
+        className="flex flex-col justify-center"
         style={{}}
       >
         <div className="text-center">
           <div className="flex justify-center items-cen">
             <div
-              className="flex flex-col justify-center items-center relative"
+              className="flex flex-col justify-center items-center relative mt-52"
               style={{ width: "60%", height: "auto" }}
             >
               <img
@@ -66,6 +67,18 @@ export default function App() {
                   transform: "translate(-50%, -115%)",
                 }}
               />
+              <img 
+              src={sparks}
+              className="absoulute z-10" 
+              style={{
+                width: "100%",
+                height: "auto",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-0%, -25%)"
+
+              }}
+              />
             </div>
           </div>
 
@@ -80,7 +93,7 @@ export default function App() {
         <img src={breakline} />
       </div>
 
-      <div className="bg-dark border-t-4 border-mag">
+      <div className="bg-dark border-t-4 border-dark">
         <div className="flex flex-col justify-center text-center m-5 my-24">
           <p className="text-3xl pb-2">
             Calling all hackers, artists, and musicians!
