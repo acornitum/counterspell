@@ -116,39 +116,41 @@ export default function App() {
         <div class="faq" className="flex flex-col justify-center text-center">
           <div className="m-5">
             <p className="mb-6 text-4xl">frequently asked questions</p>
-            <div className="items-center justify-center p-5 inter grid">
-              <Faq
-                question="Am I eligible to participate in Counterspell?"
-                answer="If you're 18 or under, yes, we are so excited to see you! If you're over 18 but still in high school, shoot us an email at counterspell@hackclub.com."
-              />
-              <Faq
-                question="Does participating cost anything?"
-                answer="Nope! We'll have meals, snacks, and beverages onsite at the hackathon, as well as swag, prizes, and fun mini-events."
-              />
-              <Faq
-                question="What has Hack Club done before?"
-                answer="We have run multiple events of this scale around the world. Each one, however is special in its own way. The summer of '21, we chartered a train across America and ran the world's longest hackathon on land. Earlier this year, we ran an outdoors do-it-yourself camping adventure in Cabot, Vermont. Check it out here! ADD LINK"
-              />
-              <Faq
-                question="What can I make at Counterspell?"
-                answer="At Counterspell, we're building video games of all kinds! The theme will be revealed at the start of the hackathon."
-              />
-              <Faq
-                question="What do I need to bring to Counterspell?"
-                answer="Your laptop, charger, and an open mind! If your location is overnight, also bring toiletries, and a sleeping bag."
-              />
-              <Faq
-                question="I'm not good at coding, can I join?"
-                answer="This hackathon is for hackers of all skill levels! We'll have workshops and other events so join us and let's learn together. If you'd like to start exploring some introductory projects, check out Hack Club Workshops."
-              />
-              <Faq
-                question="My parents are worried! What should I do?"
-                answer="We're here to help, ask them to reach out to us at counterspell@hackclub.com and we'll make sure to answer all their questions!"
-              />
-              <Faq
-                question="I have more questions, how can I reach out?"
-                answer="Contact us! Reach out at #counterspell on the Hack Club Slack or email us at counterspell@hackclub.com. We're always ready to answer all your questions!"
-              />
+            <div class="flex justify-center">
+              <div className="p-5 gap-8 inter grid 2xl:grid-cols-2 max-w-xl 2xl:max-w-6xl grow grid-rows-8 2xl:grid-rows-4">
+                <Faq
+                  question="Am I eligible to participate in Counterspell?"
+                  answer="If you're 18 or under, yes, we are so excited to see you! If you're over 18 but still in high school, shoot us an email at counterspell@hackclub.com."
+                />
+                <Faq
+                  question="Does participating cost anything?"
+                  answer="Nope! We'll have meals, snacks, and beverages onsite at the hackathon, as well as swag, prizes, and fun mini-events."
+                />
+                <Faq
+                  question="What has Hack Club done before?"
+                  answer="We have run multiple events of this scale around the world. Each one, however is special in its own way. The summer of '21, we chartered a train across America and ran the world's longest hackathon on land. Earlier this year, we ran an outdoors do-it-yourself camping adventure in Cabot, Vermont. Check it out here! ADD LINK"
+                />
+                <Faq
+                  question="What can I make at Counterspell?"
+                  answer="At Counterspell, we're building video games of all kinds! The theme will be revealed at the start of the hackathon."
+                />
+                <Faq
+                  question="What do I need to bring to Counterspell?"
+                  answer="Your laptop, charger, and an open mind! If your location is overnight, also bring toiletries, and a sleeping bag."
+                />
+                <Faq
+                  question="I'm not good at coding, can I join?"
+                  answer="This hackathon is for hackers of all skill levels! We'll have workshops and other events so join us and let's learn together. If you'd like to start exploring some introductory projects, check out Hack Club Workshops."
+                />
+                <Faq
+                  question="My parents are worried! What should I do?"
+                  answer="We're here to help, ask them to reach out to us at counterspell@hackclub.com and we'll make sure to answer all their questions!"
+                />
+                <Faq
+                  question="I have more questions, how can I reach out?"
+                  answer="Contact us! Reach out at #counterspell on the Hack Club Slack or email us at counterspell@hackclub.com. We're always ready to answer all your questions!"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -167,10 +169,10 @@ const Howtoplay = ({ ins }) => {
 
 const Faq = ({ question, answer }) => {
   return (
-    <div className="bg-darkpurp rounded-lg p-5 max-w-lg m-4">
-      <p className="mb-2 text-xl">{question}</p>
-      <p>{answer}</p>
-    </div>
+      <div className="bg-darkpurp rounded-lg p-5">
+        <p className="mb-2 text-xl">{question}</p>
+        <p>{answer}</p>
+      </div>
   );
 };
 
