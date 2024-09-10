@@ -102,11 +102,13 @@ export default function App() {
         <div className="flex flex-col justify-center text-center mb-24">
           <div className="m-5">
             <p className="mb-6 text-4xl">how to play</p>
-            <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center p-10 m-16 inter">
-              <Howtoplay ins="1. find your local hackathon using the event locator below" />
-              <Howtoplay ins="1. find your local hackathon using the event locator below" />
-              <Howtoplay ins="1. find your local hackathon using the event locator below" />
-              <Howtoplay ins="1. find your local hackathon using the event locator below" />
+            <div className="flex justify-center mx-4 my-14">
+              <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
+                <Howtoplay ins="1. find your local hackathon using the event locator below" />
+                <Howtoplay ins="1. find your local hackathon using the event locator below" />
+                <Howtoplay ins="1. find your local hackathon using the event locator below" />
+                <Howtoplay ins="1. find your local hackathon using the event locator below" />
+              </div>
             </div>
           </div>
         </div>
