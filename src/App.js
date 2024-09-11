@@ -30,82 +30,52 @@ export default function App() {
   }, []);
   return (
     <div>
-      <div>
-        <img
-          src={background}
-          className="absolute -z-30"
-          style={{ width: "100%" }}
-        />
-      </div>
-      {init && (
-        <div className="particles-container">
-          <Particles options={particlesOptions} />
-        </div>
-      )}
       <div
         class="landing"
-        className="flex flex-col justify-center"
-        style={{}}
+        className="flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top"
+        style={{backgroundImage: `url(${background})`, paddingTop: "min(6%, 2.5rem)"}}
       >
-        <div className="text-center">
-          <div className="flex justify-center items-cen" style={{maxWidth: "100%", height: "auto"}}>
+        {init && (
+          <div className="">
+            <Particles options={particlesOptions} />
+          </div>
+        )}
+        <div className="flex justify-center">
             <div
-              className="flex flex-col justify-center items-center relative"
-              style={{ width: "60%", height: "auto" }}
+              className="max-w-2xl relative w-full"
             >
               <img
                 src={billboard}
-                style={{ position: "absolute", width: "100%", height: "auto" }}
+                alt="Billboard"
+                className="w-full h-auto"
               />
               <img
                 src={title}
                 alt="Counterspell"
-                className="absolute"
-                style={{
-                  width: "70%",
-                  height: "auto",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -115%)",
-                }}
+                className="absolute h-auto top-[5%] w-full scale-[85%]"
               />
               <img
                 src={smoke}
-                alt="Counterspell"
-                className="absolute"
-                style={{
-                  width: "80%",
-                  height: "auto",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-35%, -200%)",
-                }}
+                alt="Smoke"
+                className="absolute h-auto -top-[10%] w-full scale-[80%] translate-x-[7.5%]"
               />
               <img 
-              src={sparks}
-              className="absoulute z-10" 
-              style={{
-                width: "100%",
-                height: "auto",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-0%, -25%)"
-
-              }}
+                src={sparks}
+                alt="Sparks"
+                className="absolute z-10 h-auto top-0 w-full scale-[110%]"
               />
             </div>
-          </div>
-
-          {/*<p className="text-3xl inter mb-4 mx-4">
-            Hack Club's game jam for high schoolers
-          </p>
-          <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
         </div>
+
+        {/*<p className="text-3xl inter mb-4 mx-4">
+          Hack Club's game jam for high schoolers
+        </p>
+        <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
+
+        <img src={breakline} className="w-full -mt-[35%] z-10"/>
       </div>
 
-      <div>
-        <img src={breakline} />
-      </div>
+      
 
       <div className="bg-dark border-t-4 border-dark">
         <div className="flex flex-col justify-center text-center m-5 my-24">
@@ -124,7 +94,7 @@ export default function App() {
           <div className="m-5">
             <img 
             src={aboutbkgr}
-            className="absolute"
+            className="h w-full left-0 right-0"
             
             />
             <p className="mb-6 text-4xl">imagine what you'll create</p>
