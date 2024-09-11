@@ -89,8 +89,7 @@ export default function App() {
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
-              <p className="mb-6 text-4xl">imagine what you'll create</p>
-              <p className="inter text-lg max-w-lg mx-auto">
+              <p className="inter text-lg max-w-xs mx-auto" style={{ textShadow: '5px 5px 20px rgba(0, 255, 0, 1), -5px -5px 20px rgba(0, 0, 255, 1), 0px 0px 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1),' }}>
                 This fall, Hack Club is running its biggest hackathon yet: a
                 game jam where over 5k teens across 250 locations will come
                 together for 12-24 hours to make games together.
