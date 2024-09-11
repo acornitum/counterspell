@@ -207,7 +207,7 @@ const Cards = () => {
 function Dragfaq() {
   return (
     <DragDropContext>
-      <div className="p-5 gap-8 inter grid 2xl:grid-cols-2 max-w-xl 2xl:max-w-6xl grow grid-rows-8 2xl:grid-rows-4">
+      <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
         <Faq
           question="Am I eligible to participate in Counterspell?"
           answer="If you're 18 or under, yes, we are so excited to see you! If you're over 18 but still in high school, shoot us an email at counterspell@hackclub.com."
