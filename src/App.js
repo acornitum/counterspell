@@ -5,6 +5,7 @@ import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import { Tilt } from "@jdion/tilt-react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import Banner from '@hackclub/banner';
 
 import billboard from "./art/billboard.png";
 import title from "./art/title.png";
@@ -30,6 +31,7 @@ export default function App() {
   }, []);
   return (
     <div>
+      <Banner />
       <div
         class="landing"
         className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10"
