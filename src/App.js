@@ -33,36 +33,33 @@ export default function App() {
       <div
         class="landing"
         className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10"
-        style={{backgroundImage: `url(${background})`, paddingTop: "min(6%, 2.5rem)"}}
+        style={{
+          backgroundImage: `url(${background})`,
+          paddingTop: "min(6%, 2.5rem)",
+        }}
       >
         {init && (
-            <Particles options={particlesOptions} className="absolute inset-0"/>
+          <Particles options={particlesOptions} className="absolute inset-0" />
         )}
         <div className="flex justify-center">
-            <div
-              className="max-w-2xl 2xl:max-w-6xl relative w-full"
-            >
-              <img
-                src={billboard}
-                alt="Billboard"
-                className="w-full h-auto"
-              />
-              <img
-                src={title}
-                alt="Counterspell"
-                className="absolute h-auto top-[5%] w-full scale-[85%]"
-              />
-              <img
-                src={smoke}
-                alt="Smoke"
-                className="absolute h-auto -top-[10%] w-full scale-[80%] translate-x-[7.5%]"
-              />
-              <img 
-                src={sparks}
-                alt="Sparks"
-                className="absolute z-10 h-auto top-0 w-full scale-[110%]"
-              />
-            </div>
+          <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
+            <img src={billboard} alt="Billboard" className="w-full h-auto" />
+            <img
+              src={title}
+              alt="Counterspell"
+              className="absolute h-auto top-[5%] w-full scale-[85%]"
+            />
+            <img
+              src={smoke}
+              alt="Smoke"
+              className="absolute h-auto -top-[10%] w-full scale-[80%] translate-x-[7.5%]"
+            />
+            <img
+              src={sparks}
+              alt="Sparks"
+              className="absolute z-10 h-auto top-0 w-full scale-[110%]"
+            />
+          </div>
         </div>
 
         {/*<p className="text-3xl inter mb-4 mx-4">
@@ -70,7 +67,7 @@ export default function App() {
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
-        <img src={breakline} className="w-full -mt-[35%] z-10"/>
+        <img src={breakline} className="w-full -mt-[35%] z-10" />
       </div>
 
       <div className="-mt-32 2xl:-mt-96">
@@ -87,16 +84,16 @@ export default function App() {
         </div>
 
         <div className="flex justify-center text-center">
-          <div 
+          <div
             className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64"
-            style={{backgroundImage: `url(${aboutbkgr})`}}
+            style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
               <p className="mb-6 text-4xl">imagine what you'll create</p>
               <p className="inter text-lg max-w-lg mx-auto">
-                This fall, Hack Club is running its biggest hackathon yet: a game
-                jam where over 5k teens across 250 locations will come together
-                for 12-24 hours to make games together.
+                This fall, Hack Club is running its biggest hackathon yet: a
+                game jam where over 5k teens across 250 locations will come
+                together for 12-24 hours to make games together.
               </p>
             </div>
           </div>
@@ -127,9 +124,18 @@ export default function App() {
       </div>
 
       <div className="flex justify-center items-center mt-4 p-6 bg-darkpurp text-lg">
-        <a href="https://hackclub.com" className="mx-4">Hack Club</a> | <a href="https://hackclub.com/slack/" className="mx-4">Slack</a> | <a href="https://www.instagram.com/starthackclub/" className="mx-4">Instagram</a>
+        <a href="https://hackclub.com" className="mx-4">
+          Hack Club
+        </a>{" "}
+        |{" "}
+        <a href="https://hackclub.com/slack/" className="mx-4">
+          Slack
+        </a>{" "}
+        |{" "}
+        <a href="https://www.instagram.com/starthackclub/" className="mx-4">
+          Instagram
+        </a>
       </div>
-
     </div>
   );
 }
