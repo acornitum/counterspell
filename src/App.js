@@ -32,13 +32,11 @@ export default function App() {
     <div>
       <div
         class="landing"
-        className="flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top"
+        className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top"
         style={{backgroundImage: `url(${background})`, paddingTop: "min(6%, 2.5rem)"}}
       >
         {init && (
-          <div className="">
-            <Particles options={particlesOptions} />
-          </div>
+            <Particles options={particlesOptions} className="absolute inset-0"/>
         )}
         <div className="flex justify-center">
             <div
