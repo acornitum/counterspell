@@ -32,7 +32,7 @@ export default function App() {
     <div>
       <div
         class="landing"
-        className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top"
+        className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10"
         style={{backgroundImage: `url(${background})`, paddingTop: "min(6%, 2.5rem)"}}
       >
         {init && (
@@ -73,9 +73,7 @@ export default function App() {
         <img src={breakline} className="w-full -mt-[35%] z-10"/>
       </div>
 
-      
-
-      <div className="bg-dark border-t-4 border-dark">
+      <div className="-mt-32 2xl:-mt-96">
         <div className="flex flex-col justify-center text-center m-5 my-24">
           <p className="text-3xl pb-2">
             Calling all hackers, artists, and musicians!
@@ -88,19 +86,19 @@ export default function App() {
           <Cards />
         </div>
 
-        <div className="flex flex-col justify-center text-center my-64">
-          <div className="m-5">
-            <img 
-            src={aboutbkgr}
-            className="h w-full left-0 right-0"
-            
-            />
-            <p className="mb-6 text-4xl">imagine what you'll create</p>
-            <p className="inter text-lg max-w-lg mx-auto">
-              This fall, Hack Club is running its biggest hackathon yet: a game
-              jam where over 5k teens across 250 locations will come together
-              for 12-24 hours to make games together.
-            </p>
+        <div className="flex justify-center text-center">
+          <div 
+            className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64"
+            style={{backgroundImage: `url(${aboutbkgr})`}}
+          >
+            <div style={{}}>
+              <p className="mb-6 text-4xl">imagine what you'll create</p>
+              <p className="inter text-lg max-w-lg mx-auto">
+                This fall, Hack Club is running its biggest hackathon yet: a game
+                jam where over 5k teens across 250 locations will come together
+                for 12-24 hours to make games together.
+              </p>
+            </div>
           </div>
         </div>
 
