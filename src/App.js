@@ -15,6 +15,11 @@ import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
 import smoke from "./art/smoke.png";
 
+import apo1 from "./art/images/apo1.png"
+import apo2 from "./art/images/apo2.png"
+import apo3 from "./art/images/apo3.png"
+import apo4 from "./art/images/apo4.png"
+
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -84,7 +89,7 @@ export default function App() {
 
         <div className="flex justify-center text-center">
           <div
-            className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64"
+            className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
@@ -110,6 +115,8 @@ export default function App() {
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
                 <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
                   <p className="my-10 mx-5 max-w-44">
+                    <img 
+                    src=""/>
                     1. find your local hackathon using the event locator below
                   </p>
                 </div>
