@@ -75,11 +75,10 @@ export default function App() {
       <div className="-mt-32 2xl:-mt-96">
         <div className="flex flex-col justify-center text-center m-5 my-24">
           <p className="text-3xl pb-2">
-            Calling all hackers, artists, and musicians!
+            Artist, Musician or Hacker?
           </p>
           <p className="text-3xl">
-            This is a <span className="text-blue">game jam</span> where you can{" "}
-            <span className="text-mag">choose your own adventure</span>
+            Sign up to make games with your friends over the weekend!
           </p>
           <p className="text-3xl mb-8"></p>
           <Cards />
