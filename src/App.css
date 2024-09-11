@@ -53,3 +53,8 @@ li {
 a:link {
   text-decoration: underline;
 }
+
+img, canvas {
+  /* We have a lot of pixel art, so let's default to this instead of some modern blurred renderer */
+  image-rendering: pixelated;
+}
