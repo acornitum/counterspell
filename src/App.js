@@ -42,7 +42,7 @@ export default function App() {
         )}
         <div className="flex justify-center">
             <div
-              className="max-w-2xl relative w-full"
+              className="max-w-2xl 2xl:max-w-6xl relative w-full"
             >
               <img
                 src={billboard}
