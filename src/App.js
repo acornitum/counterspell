@@ -78,16 +78,7 @@ export default function App() {
       </div>
 
       <div className="-mt-32 2xl:-mt-96">
-        <div className="flex flex-col justify-center text-center m-5 my-24">
-          <p className="text-3xl pb-2">Artist, Musician or Hacker?</p>
-          <p className="text-3xl">
-            Sign up to make games with your friends over the weekend!
-          </p>
-          <p className="text-3xl mb-8"></p>
-          <Cards />
-        </div>
-
-        <div className="flex justify-center text-center">
+      <div className="flex justify-center text-center">
           <div
             className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
@@ -107,6 +98,17 @@ export default function App() {
             </div>
           </div>
         </div>
+        
+        <div className="flex flex-col justify-center text-center m-5 my-24">
+          <p className="text-3xl pb-2">Artist, Musician or Hacker?</p>
+          <p className="text-3xl">
+            Sign up to make games with your friends over the weekend!
+          </p>
+          <p className="text-3xl mb-8"></p>
+          <Cards />
+        </div>
+
+        
 
         <div className="flex flex-col justify-center text-center mb-24">
           <div className="m-5">
