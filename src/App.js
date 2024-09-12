@@ -67,6 +67,10 @@ export default function App() {
               alt="Sparks"
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
             />
+            <div className="flex justify-center text-center">
+                          <div className="z-50 absolute top-[55%] text-xl">Nov 9-10, 2024 // in a city near you</div>
+
+            </div>
           </div>
         </div>
 
@@ -109,7 +113,7 @@ export default function App() {
           >
             <div style={{}}>
               <p
-                className="inter text-lg max-w-xs mx-auto bg-darkpurp p-4 bg-opacity-60"
+                className="inter text-lg max-w-xs mx-auto bg-dark p-4 bg-opacity-60"
                 style={{
                   textShadow:
                     "5px 5px 20px rgba(0, 255, 0, 1), -5px -5px 20px rgba(0, 0, 255, 1), 0px 0px 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1),",
