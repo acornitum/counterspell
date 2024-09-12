@@ -9,7 +9,11 @@ import Banner from "@hackclub/banner";
 
 import billboard from "./art/billboard.png";
 import title from "./art/title.png";
-import background from "./art/background.png";
+import bg1 from "./art/hero/bg1.png";
+import bg2 from "./art/hero/bg2.png";
+import bg3 from "./art/hero/bg3.png";
+import bg4 from "./art/hero/bg4.png";
+import bg5 from "./art/hero/bg5.png";
 import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
@@ -39,32 +43,37 @@ export default function App() {
       <Banner />
       <div
         class="landing"
-        className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10"
-        style={{
-          backgroundImage: `url(${background})`,
-          paddingTop: "min(6%, 2.5rem)",
-        }}
+        className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10 overflow-hidden select-none pointer-events-none"
+        style={{ backgroundImage: `url(${bg5})` }}
       >
         {init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
         )}
         <div className="flex justify-center">
           <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
-            <img src={billboard} alt="Billboard" className="w-full h-auto" />
+            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
             <img
               src={title}
               alt="Counterspell"
-              className="absolute h-auto top-[5%] w-full scale-[85%]"
+              className="absolute h-auto top-[10%] w-full scale-[85%]"
             />
             <img
               src={smoke}
               alt="Smoke"
+<<<<<<< HEAD
               className="absolute h-auto -top-[7%] w-full scale-[100%] translate-x-[-3%]"
+=======
+              className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
+>>>>>>> refs/remotes/origin/master
             />
             <img
               src={sparks}
               alt="Sparks"
+<<<<<<< HEAD
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
+=======
+              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
+>>>>>>> refs/remotes/origin/master
             />
           </div>
         </div>
@@ -74,6 +83,7 @@ export default function App() {
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
+<<<<<<< HEAD
         <img src={breakline} className="w-full -mt-[35%] z-10" />
       </div>
 
@@ -89,11 +99,38 @@ export default function App() {
           </p>
           <p className="text-3xl mb-8"></p>
           <Cards />
+=======
+        <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
+          <img
+            className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
+            src={bg1}
+            alt=""
+          />
+          <img
+            className="absolute bottom-0 -z-20 -mb-[45px] 2xl:-mb-[10px]"
+            src={bg2}
+            alt=""
+          />
+          <img
+            className="absolute bottom-0 -z-30 -mb-[25px] 2xl:mb-0 2xl:bottom-[10px]"
+            src={bg3}
+            alt=""
+          />
+          <img
+            className="absolute bottom-0 -z-40 2xl:bottom-[40px]"
+            src={bg4}
+            alt=""
+          />
+>>>>>>> refs/remotes/origin/master
         </div>
 
-        <div className="flex justify-center text-center">
+        <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
+      </div>
+
+      <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
+      <div className="flex justify-center text-center overflow-hidden">
           <div
-            className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64 clear"
+            className="m-5 max-w-6xl min-w-[500px] grow bg-no-repeat bg-contain bg-center py-12 sm:pt-32 lg:py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
@@ -111,6 +148,17 @@ export default function App() {
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col justify-center text-center m-5 my-24">
+          <p className="text-3xl pb-2">Artist, Musician or Hacker?</p>
+          <p className="text-3xl">
+            Sign up to make games with your friends over the weekend!
+          </p>
+          <p className="text-3xl mb-8"></p>
+          <Cards />
+        </div>
+
+        
 
         <div className="flex flex-col justify-center text-center mb-24">
           <div className="m-5">
