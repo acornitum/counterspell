@@ -13,12 +13,12 @@ import background from "./art/background.png";
 import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
-import smoke from "./art/smoke.png";
+import smoke from "./art/smoke.gif";
 
-import apo1 from "./art/images/apo1.png"
-import apo2 from "./art/images/apo2.png"
-import apo3 from "./art/images/apo3.png"
-import apo4 from "./art/images/apo4.png"
+import apo1 from "./art/images/apo1.png";
+import apo2 from "./art/images/apo2.png";
+import apo3 from "./art/images/apo3.png";
+import apo4 from "./art/images/apo4.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -59,12 +59,12 @@ export default function App() {
             <img
               src={smoke}
               alt="Smoke"
-              className="absolute h-auto -top-[10%] w-full scale-[80%] translate-x-[7.5%]"
+              className="absolute h-auto -top-[7%] w-full scale-[100%] translate-x-[-3%]"
             />
             <img
               src={sparks}
               alt="Sparks"
-              className="absolute z-10 h-auto top-0 w-full scale-[110%]"
+              className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
             />
           </div>
         </div>
@@ -76,6 +76,10 @@ export default function App() {
 
         <img src={breakline} className="w-full -mt-[35%] z-10" />
       </div>
+
+
+
+      
 
       <div className="-mt-32 2xl:-mt-96">
         <div className="flex flex-col justify-center text-center m-5 my-24">
@@ -94,7 +98,7 @@ export default function App() {
           >
             <div style={{}}>
               <p
-                className="inter text-lg max-w-xs mx-auto"
+                className="inter text-lg max-w-xs mx-auto bg-darkpurp p-4 bg-opacity-60"
                 style={{
                   textShadow:
                     "5px 5px 20px rgba(0, 255, 0, 1), -5px -5px 20px rgba(0, 0, 255, 1), 0px 0px 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1),",
@@ -113,28 +117,77 @@ export default function App() {
             <p className="mb-6 text-4xl">how to play</p>
             <div className="flex justify-center mx-4 my-14">
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
-                    <img 
-                    src=""/>
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo1}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
                     1. find your local hackathon using the event locator below
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
-                    2. find a team of other high school students
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo2}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
+                  2. find a team of other high school students
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
-                    3. build a game from scratch that weekend
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo3}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
+                  3. build a game from scratch that weekend
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
-                    4. show off your project!
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo4}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
+                  4. show off your project!
+
+
                   </p>
                 </div>
+               
               </div>
             </div>
           </div>
