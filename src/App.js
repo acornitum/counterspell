@@ -60,20 +60,12 @@ export default function App() {
             <img
               src={smoke}
               alt="Smoke"
-<<<<<<< HEAD
-              className="absolute h-auto -top-[7%] w-full scale-[100%] translate-x-[-3%]"
-=======
-              className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
->>>>>>> refs/remotes/origin/master
+              className="absolute h-auto -top-[0%] w-full scale-[110%] translate-x-[-1%]"
             />
             <img
               src={sparks}
               alt="Sparks"
-<<<<<<< HEAD
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
-=======
-              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
->>>>>>> refs/remotes/origin/master
             />
           </div>
         </div>
@@ -83,23 +75,6 @@ export default function App() {
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
-<<<<<<< HEAD
-        <img src={breakline} className="w-full -mt-[35%] z-10" />
-      </div>
-
-
-
-      
-
-      <div className="-mt-32 2xl:-mt-96">
-        <div className="flex flex-col justify-center text-center m-5 my-24">
-          <p className="text-3xl pb-2">Artist, Musician or Hacker?</p>
-          <p className="text-3xl">
-            Sign up to make games with your friends over the weekend!
-          </p>
-          <p className="text-3xl mb-8"></p>
-          <Cards />
-=======
         <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
           <img
             className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
@@ -121,7 +96,6 @@ export default function App() {
             src={bg4}
             alt=""
           />
->>>>>>> refs/remotes/origin/master
         </div>
 
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
