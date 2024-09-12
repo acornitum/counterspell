@@ -101,10 +101,10 @@ export default function App() {
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
       </div>
 
-      <div className="-mt-28 2xl:-mt-80">
-      <div className="flex justify-center text-center">
+      <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
+      <div className="flex justify-center text-center overflow-hidden">
           <div
-            className="m-5 max-w-6xl grow bg-no-repeat bg-contain bg-center py-64 clear"
+            className="m-5 max-w-6xl min-w-[500px] grow bg-no-repeat bg-contain bg-center py-12 sm:pt-32 lg:py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
