@@ -24,6 +24,9 @@ import apo2 from "./art/images/apo2.png";
 import apo3 from "./art/images/apo3.png";
 import apo4 from "./art/images/apo4.png";
 
+import hacker from "./art/cards/hacker.png";
+import musician from "./art/cards/musician.png";
+
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -51,7 +54,11 @@ export default function App() {
         )}
         <div className="flex justify-center">
           <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
-            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
+            <img
+              src={billboard}
+              alt="Billboard"
+              className="w-full h-auto mt-[5%]"
+            />
             <img
               src={title}
               alt="Counterspell"
@@ -68,8 +75,9 @@ export default function App() {
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
             />
             <div className="flex justify-center text-center">
-                          <div className="z-50 absolute top-[55%] text-xl">Nov 9-10, 2024 // in a city near you</div>
-
+              <div className="z-50 absolute top-[55%] text-xl">
+                Nov 9-10, 2024 // in a city near you
+              </div>
             </div>
           </div>
         </div>
@@ -106,7 +114,7 @@ export default function App() {
       </div>
 
       <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
-      <div className="flex justify-center text-center overflow-hidden">
+        <div className="flex justify-center text-center overflow-hidden">
           <div
             className="m-5 max-w-6xl min-w-[500px] grow bg-no-repeat bg-contain bg-center py-12 sm:pt-32 lg:py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
@@ -135,8 +143,6 @@ export default function App() {
           <p className="text-3xl mb-8"></p>
           <Cards />
         </div>
-
-        
 
         <div className="flex flex-col justify-center text-center mb-24">
           <div className="m-5">
@@ -174,7 +180,7 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                  2. find a team of other high school students
+                    2. find a team of other high school students
                   </p>
                 </div>
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
@@ -191,7 +197,7 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                  3. build a game from scratch that weekend
+                    3. build a game from scratch that weekend
                   </p>
                 </div>
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
@@ -208,12 +214,9 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                  4. show off your project!
-
-
+                    4. show off your project!
                   </p>
                 </div>
-               
               </div>
             </div>
           </div>
@@ -259,13 +262,33 @@ const Cards = () => {
   return (
     <div className="flex flex-wrap justify-center">
       <Tilt
-        className="bg-lightpurp rounded-lg p-5 m-4"
-        style={{ width: "340px", height: "500px" }}
-      ></Tilt>
+        className="m-4"
+      >
+        <div>
+          <img
+            src={hacker}
+            className="rounded-lg"
+            style={{
+              width: "340px",
+              height: "500px",
+            }}
+          />
+        </div>
+      </Tilt>
       <Tilt
-        className="bg-lightpurp rounded-lg p-5 m-4"
-        style={{ width: "340px", height: "500px" }}
-      ></Tilt>
+        className="m-4"
+      >
+        <div>
+          <img
+            src={musician}
+            className="rounded-lg"
+            style={{
+              width: "340px",
+              height: "500px",
+            }}
+          />
+        </div>
+      </Tilt>
       <Tilt
         className="bg-lightpurp rounded-lg p-5 m-4"
         style={{ width: "340px", height: "500px" }}
