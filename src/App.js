@@ -75,8 +75,8 @@ export default function App() {
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
             />
             <div className="flex justify-center text-center">
-              <div className="z-50 absolute top-[55%] text-xl">
-                Nov 9-10, 2024 // in a city near you
+              <div className="z-50 absolute top-[55%] text-xl bg-dark p-2 bg-opacity-60">
+                <span className="text-mag">Game jam</span> happening <span className="text-blue">Nov 9-10</span> in <span className="text-green">a city near you</span>
               </div>
             </div>
           </div>
