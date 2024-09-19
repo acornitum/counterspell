@@ -19,10 +19,10 @@ import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
 import smoke from "./art/smoke.png";
 
-import apo1 from "./art/images/apo1.png"
-import apo2 from "./art/images/apo2.png"
-import apo3 from "./art/images/apo3.png"
-import apo4 from "./art/images/apo4.png"
+import apo1 from "./art/images/apo1.png";
+import apo2 from "./art/images/apo2.png";
+import apo3 from "./art/images/apo3.png";
+import apo4 from "./art/images/apo4.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -33,6 +33,7 @@ export default function App() {
     }
 
     initParticlesEngine(async (engine) => {
+      console.log("particles.js loaded");
       await loadFull(engine);
     }).then(() => {
       setInit(true);
@@ -49,60 +50,19 @@ export default function App() {
         {init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
         )}
-        <div className="flex justify-center">
-          <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
-            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
-            <img
-              src={title}
-              alt="Counterspell"
-              className="absolute h-auto top-[10%] w-full scale-[85%]"
-            />
-            <img
-              src={smoke}
-              alt="Smoke"
-              className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
-            />
-            <img
-              src={sparks}
-              alt="Sparks"
-              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
-            />
-          </div>
-        </div>
 
         {/*<p className="text-3xl inter mb-4 mx-4">
           Hack Club's game jam for high schoolers
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
-        <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
-          <img
-            className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
-            src={bg1}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-20 -mb-[45px] 2xl:-mb-[10px]"
-            src={bg2}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-30 -mb-[25px] 2xl:mb-0 2xl:bottom-[10px]"
-            src={bg3}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-40 2xl:bottom-[40px]"
-            src={bg4}
-            alt=""
-          />
-        </div>
+        <HeroBg />
 
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
       </div>
 
       <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
-      <div className="flex justify-center text-center overflow-hidden">
+        <div className="flex justify-center text-center overflow-hidden">
           <div
             className="m-5 max-w-6xl min-w-[500px] grow bg-no-repeat bg-contain bg-center py-12 sm:pt-32 lg:py-64 clear"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
@@ -132,8 +92,6 @@ export default function App() {
           <Cards />
         </div>
 
-        
-
         <div className="flex flex-col justify-center text-center mb-24">
           <div className="m-5">
             <p className="mb-6 text-4xl">how to play</p>
@@ -141,8 +99,7 @@ export default function App() {
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
                 <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
                   <p className="my-10 mx-5 max-w-44">
-                    <img 
-                    src=""/>
+                    <img src="" />
                     1. find your local hackathon using the event locator below
                   </p>
                 </div>
@@ -306,3 +263,81 @@ function Faq2() {
     </div>
   );
 }
+
+const HeroBg = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  return (
+    <>
+      <div className="flex justify-center">
+        <div
+          className="max-w-2xl 2xl:max-w-6xl relative w-full"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 5) / 20 : 0}px)` }}
+        >
+          <img
+            src={billboard}
+            alt="Billboard"
+            className="w-full h-auto mt-[5%]"
+          />
+          <img
+            src={title}
+            alt="Counterspell"
+            className="absolute h-auto top-[10%] w-full scale-[85%]"
+          />
+          <img
+            src={smoke}
+            alt="Smoke"
+            className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
+          />
+          <img
+            src={sparks}
+            alt="Sparks"
+            className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
+          />
+        </div>
+      </div>
+      <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
+        <img
+          className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 1) / 20 : 0}px)` }}
+          src={bg1}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-20 -mb-[45px] 2xl:-mb-[10px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 2) / 20 : 0}px)` }}
+          src={bg2}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-30 -mb-[25px] 2xl:mb-0 2xl:bottom-[10px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 3) / 20 : 0}px)` }}
+          src={bg3}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-40 2xl:bottom-[40px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 4) / 20 : 0}px)` }}
+          src={bg4}
+          alt=""
+        />
+      </div>
+    </>
+  );
+};
