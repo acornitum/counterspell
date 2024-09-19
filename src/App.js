@@ -53,33 +53,13 @@ export default function App() {
         {init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
         )}
-        <div className="flex justify-center">
-          <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
-            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
-            <img
-              src={title}
-              alt="Counterspell"
-              className="absolute h-auto top-[10%] w-full scale-[85%]"
-            />
-            <img
-              src={smoke}
-              alt="Smoke"
-              className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
-            />
-            <img
-              src={sparks}
-              alt="Sparks"
-              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
-            />
-          </div>
-        </div>
 
         {/*<p className="text-3xl inter mb-4 mx-4">
           Hack Club's game jam for high schoolers
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
-        <HeroBg />
+        <HeroScroll />
 
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
       </div>
@@ -354,7 +334,7 @@ function Faq2() {
   );
 }
 
-const HeroBg = () => {
+const HeroScroll = () => {
   const [scrollY, setScrollY] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -380,26 +360,22 @@ const HeroBg = () => {
           className="max-w-2xl 2xl:max-w-6xl relative w-full"
           style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 5) / 20 : 0}px)` }}
         >
-          <img
-            src={billboard}
-            alt="Billboard"
-            className="w-full h-auto mt-[5%]"
-          />
-          <img
-            src={title}
-            alt="Counterspell"
-            className="absolute h-auto top-[10%] w-full scale-[85%]"
-          />
-          <img
-            src={smoke}
-            alt="Smoke"
-            className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
-          />
-          <img
-            src={sparks}
-            alt="Sparks"
-            className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
-          />
+            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
+            <img
+              src={title}
+              alt="Counterspell"
+              className="absolute h-auto top-[10%] w-full scale-[85%]"
+            />
+            <img
+              src={smoke}
+              alt="Smoke"
+              className="absolute h-auto top-[2%] w-full scale-[110%] -translate-x-[1.1%]"
+            />
+            <img
+              src={sparks}
+              alt="Sparks"
+              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
+            />
         </div>
       </div>
       <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
