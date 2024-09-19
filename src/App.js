@@ -28,6 +28,17 @@ import apo5 from "./art/images/apo5.png";
 import hacker from "./art/cards/hacker.png";
 import musician from "./art/cards/musician.png";
 
+import flare1 from "./art/flares/flare1.png"
+import flare2 from "./art/flares/flare2.png"
+import flare3 from "./art/flares/flare3.png"
+import flare4 from "./art/flares/flare4.png"
+import flare5 from "./art/flares/flare5.png"
+import flare6 from "./art/flares/flare6.png"
+import flare7 from "./art/flares/flare7.png"
+import flare8 from "./art/flares/flare8.png"
+import flare9 from "./art/flares/flare9.png"
+import flare10 from "./art/flares/flare10.png"
+
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -65,6 +76,14 @@ export default function App() {
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
       </div>
 
+      <div className="relative">
+          <img src={flare1} className="absolute -z-10" style={{width: "300px", height: "auto"}}/>
+      </div>
+      
+      <div className="relative">
+          <img src={flare2} className="absolute -z-10" style={{width: "300px", height: "auto", right: 0}}/>
+      </div>
+
       <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
         <div className="flex justify-center text-center overflow-hidden">
           <div
@@ -84,6 +103,13 @@ export default function App() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="relative">
+          <img src={flare3} className="absolute -z-10" style={{width: "400px", height: "auto"}}/>
+        </div>
+        <div className="relative">
+            <img src={flare4} className="absolute -z-10" style={{width: "400px", height: "auto", right: 0}}/>
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
@@ -194,6 +220,15 @@ export default function App() {
               </div>
             </div>
           </div>
+        </div>
+
+
+        <div className="relative">
+          <img src={flare9} className="absolute -z-10" style={{width: "400px", height: "auto"}}/>
+        </div>
+
+        <div className="relative">
+          <img src={flare10} className="absolute -z-10" style={{width: "400px", height: "auto", right: 0}}/>
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
