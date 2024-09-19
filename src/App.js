@@ -381,6 +381,13 @@ const HeroScroll = () => {
               alt="Sparks"
               className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
             />
+            <div className="flex justify-center text-center">
+              <div className="z-50 absolute top-[55%] text-6xl "  >
+                <p class="gradient-text neuebit">NOVEMBER 9-10 | IN-PERSON, WORLDWIDE
+                </p>
+                
+              </div>
+            </div>
         </div>
       </div>
       <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
