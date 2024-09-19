@@ -36,6 +36,7 @@ export default function App() {
     }
 
     initParticlesEngine(async (engine) => {
+      console.log("particles.js loaded");
       await loadFull(engine);
     }).then(() => {
       setInit(true);
@@ -52,65 +53,13 @@ export default function App() {
         {init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
         )}
-        <div className="flex justify-center">
-          <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
-            <img
-              src={billboard}
-              alt="Billboard"
-              className="w-full h-auto mt-[5%]"
-            />
-            <img
-              src={title}
-              alt="Counterspell"
-              className="absolute h-auto top-[10%] w-full scale-[85%]"
-            />
-            <img
-              src={smoke}
-              alt="Smoke"
-              className="absolute h-auto -top-[0%] w-full scale-[110%] translate-x-[-1%]"
-            />
-            <img
-              src={sparks}
-              alt="Sparks"
-              className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
-            />
-            <div className="flex justify-center text-center">
-              <div className="z-50 absolute top-[55%] text-6xl "  >
-                <p class="gradient-text neuebit">NOVEMBER 9-10 | IN-PERSON, WORLDWIDE
-                </p>
-                
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/*<p className="text-3xl inter mb-4 mx-4">
           Hack Club's game jam for high schoolers
         </p>
         <p className="inter">November 9-10th, 2024 // in-person, worldwide</p> */}
 
-        <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
-          <img
-            className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
-            src={bg1}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-20 -mb-[45px] 2xl:-mb-[10px]"
-            src={bg2}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-30 -mb-[25px] 2xl:mb-0 2xl:bottom-[10px]"
-            src={bg3}
-            alt=""
-          />
-          <img
-            className="absolute bottom-0 -z-40 2xl:bottom-[40px]"
-            src={bg4}
-            alt=""
-          />
-        </div>
+        <HeroScroll />
 
         <img src={breakline} alt="" className="w-full -mt-[35%] z-10" />
       </div>
@@ -389,3 +338,77 @@ function Faq2() {
     </div>
   );
 }
+
+const HeroScroll = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  return (
+    <>
+      <div className="flex justify-center">
+        <div
+          className="max-w-2xl 2xl:max-w-6xl relative w-full"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 5) / 20 : 0}px)` }}
+        >
+            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
+            <img
+              src={title}
+              alt="Counterspell"
+              className="absolute h-auto top-[10%] w-full scale-[85%]"
+            />
+            <img
+              src={smoke}
+              alt="Smoke"
+              className="absolute h-auto top-[2%] w-full scale-[110%] -translate-x-[1.1%]"
+            />
+            <img
+              src={sparks}
+              alt="Sparks"
+              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
+            />
+        </div>
+      </div>
+      <div class="translate-y-[35vw] md:translate-y-[200px] translate-x-[50vw] 2xl:translate-x-[120vw] scale-[300%] md:scale-[250%] 2xl:scale-[350%] -z-50">
+        <img
+          className="absolute bottom-0 bg-no-repeat -z-10 -mb-[60px] 2xl:-mb-[20px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 1) / 20 : 0}px)` }}
+          src={bg1}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-20 -mb-[45px] 2xl:-mb-[10px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 2) / 20 : 0}px)` }}
+          src={bg2}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-30 -mb-[25px] 2xl:mb-0 2xl:bottom-[10px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 3) / 20 : 0}px)` }}
+          src={bg3}
+          alt=""
+        />
+        <img
+          className="absolute bottom-0 -z-40 2xl:bottom-[40px]"
+          style={{ transform: `translateY(${screenWidth > 640 ? (scrollY * 4) / 20 : 0}px)` }}
+          src={bg4}
+          alt=""
+        />
+      </div>
+    </>
+  );
+};
