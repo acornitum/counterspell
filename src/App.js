@@ -75,8 +75,10 @@ export default function App() {
               className="absolute z-10 h-auto w-full scale-[130%] top-[3%]"
             />
             <div className="flex justify-center text-center">
-              <div className="z-50 absolute top-[55%] text-xl bg-dark p-2 bg-opacity-60">
-                <span className="text-mag">Game jam</span> happening <span className="text-blue">Nov 9-10</span> in <span className="text-green">a city near you</span>
+              <div className="z-50 absolute top-[55%] text-6xl "  >
+                <p class="gradient-text neuebit">NOVEMBER 9-10 | IN-PERSON, WORLDWIDE
+                </p>
+                
               </div>
             </div>
           </div>
@@ -121,33 +123,31 @@ export default function App() {
           >
             <div style={{}}>
               <p
-                className="inter text-lg max-w-xs mx-auto bg-dark p-4 bg-opacity-60"
+                className="inter text-4xl max-w-md mx-auto bg-dark p-4 bg-opacity-80"
                 style={{
-                  textShadow:
-                    "5px 5px 20px rgba(0, 255, 0, 1), -5px -5px 20px rgba(0, 0, 255, 1), 0px 0px 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1),",
+                  
                 }}
               >
-                This fall, Hack Club is running its biggest hackathon yet: a
-                game jam where over 5k teens across 250 locations will come
-                together for 12-24 hours to make games together.
+                <b class="neuebit">Join other teenagers from your city at our <span class="gradient-text">beginner-friendly game jam</span> , where you make games in teams and win prizes!
+                  </b>
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center text-center m-5 my-24">
-          <p className="text-3xl pb-2">Artist, Musician or Hacker?</p>
-          <p className="text-3xl">
-            Sign up to make games with your friends over the weekend!
+        <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
+          <p className="text-6xl gradient-text">Artist, Musician or Hacker?</p>
+          <p className="text-6xl">
+            Join one of the three guilds when you sign up!
           </p>
           <p className="text-3xl mb-8"></p>
           <Cards />
         </div>
 
-        <div className="flex flex-col justify-center text-center mb-24">
+        <div className="flex flex-col justify-center text-center mb-24 neuebit">
           <div className="m-5">
-            <p className="mb-6 text-4xl">how to play</p>
-            <div className="flex justify-center mx-4 my-14">
+            <p className="text-6xl">How to play:</p>
+            <div className="flex justify-center mx-4 my-6">
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
@@ -222,9 +222,9 @@ export default function App() {
           </div>
         </div>
 
-        <div class="faq" className="flex flex-col justify-center text-center">
+        <div class="faq" className="flex flex-col justify-center text-center neuebit">
           <div className="m-5">
-            <p className="mb-6 text-4xl">frequently asked questions</p>
+            <p className="mb-6 text-6xl">Frequently Asked Questions</p>
             <div class="flex justify-center">
               <Faq2 />
             </div>
@@ -232,7 +232,9 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-4 p-6 bg-darkpurp text-lg">
+      
+      <div className="mt-4 p-6 bg-darkpurp text-lg">
+        <div className="flex justify-center items-center ">
         <a href="https://hackclub.com" className="mx-4">
           Hack Club
         </a>{" "}
@@ -245,6 +247,11 @@ export default function App() {
           Instagram
         </a>
       </div>
+      <div className="right-2"> 
+        <p>Art by Elena (19) FORMAT THIS LATER</p>
+      </div>
+      </div>
+      
     </div>
   );
 }
@@ -252,8 +259,8 @@ export default function App() {
 const Faq = ({ question, answer }) => {
   return (
     <div className="bg-darkpurp rounded-lg p-5">
-      <p className="mb-2 text-xl">{question}</p>
-      <p>{answer}</p>
+      <p className="mb-2 text-4xl">{question}</p>
+      <p className="text-[28px]">{answer}</p>
     </div>
   );
 };
@@ -299,9 +306,9 @@ const Cards = () => {
 
 function Faq2() {
   return (
-    <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
-      <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
+    <div className="p-5 gap-8 neuebit grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4 leading-none">
+      <div className="bg-darkpurp rounded-lg p-5 text-[28px]">
+        <p className="mb-2 text-4xl">
           Am I eligible to participate in Counterspell?
         </p>
         <p>
@@ -317,8 +324,8 @@ function Faq2() {
         answer="Nope! We'll have meals, snacks, and beverages onsite at the hackathon, as well as swag, prizes, and fun mini-events."
       />
       <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">What has Hack Club done before?</p>
-        <p>
+        <p className="mb-2 text-4xl">What has Hack Club done before?</p>
+        <p className="text-[28px]">
           We have run multiple events of this scale around the world. Each one,
           however is special in its own way. The summer of '21, we{" "}
           <a
@@ -352,10 +359,10 @@ function Faq2() {
         answer="This hackathon is for hackers of all skill levels! We'll have workshops and other events so join us and let's learn together. If you'd like to start exploring some introductory projects, check out Hack Club Workshops."
       />
       <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
+        <p className="mb-2 text-4xl">
           My parents are worried! What should I do?
         </p>
-        <p>
+        <p className="text-[28px]">
           We're here to help! Ask them to reach out to us at{" "}
           <a href="mailto:counterspell@hackclub.com">
             counterspell@hackclub.com
@@ -364,10 +371,10 @@ function Faq2() {
         </p>
       </div>
       <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
+        <p className="mb-2 text-4xl">
           I have more questions, how can I reach out?
         </p>
-        <p>
+        <p className="text-[28px]">
           Contact us! Reach out at{" "}
           <a href="https://hackclub.com/slack/" rel="noopener noreferrer">
             #counterspell
