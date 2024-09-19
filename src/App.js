@@ -23,6 +23,7 @@ import apo1 from "./art/images/apo1.png";
 import apo2 from "./art/images/apo2.png";
 import apo3 from "./art/images/apo3.png";
 import apo4 from "./art/images/apo4.png";
+import apo5 from "./art/images/apo5.png";
 
 import hacker from "./art/cards/hacker.png";
 import musician from "./art/cards/musician.png";
@@ -85,7 +86,9 @@ export default function App() {
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
-          <p className="text-6xl gradient-text">Artist, Musician or Hacker?</p>
+          <p className="text-6xl">
+            <span className="text-blue">Artist</span>, <span className="text-green">Musician</span> or <span className="text-pink">Hacker</span>?
+          </p>
           <p className="text-6xl">
             Join one of the three guilds when you sign up!
           </p>
@@ -97,7 +100,7 @@ export default function App() {
           <div className="m-5">
             <p className="text-6xl">How to play:</p>
             <div className="flex justify-center mx-4 my-6">
-              <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
+              <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center inter py-8 grow">
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
@@ -112,7 +115,7 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                    1. find your local hackathon using the event locator below
+                    1. Sign up for a Counterspell Event in your city
                   </p>
                 </div>
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
@@ -129,7 +132,7 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                    2. find a team of other high school students
+                    2. Find a team of other teenagers at Counterspell
                   </p>
                 </div>
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
@@ -146,9 +149,27 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                    3. build a game from scratch that weekend
+                    3. Start building your game (no experience needed)
                   </p>
                 </div>
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo5}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
+                    4. Attend workshops, or talk to one of our mentors for help
+                  </p>
+                </div>
+
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
@@ -163,7 +184,7 @@ export default function App() {
                   </div>
 
                   <p className="my-2 mx-5 max-w-44">
-                    4. show off your project!
+                    5. Ship what you made and share it with the rest of the world!
                   </p>
                 </div>
               </div>
@@ -181,6 +202,15 @@ export default function App() {
         </div>
       </div>
 
+      <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
+          <p className="text-6xl">
+            Want to organize Counterspell in your city?
+          </p>
+          <p className="text-6xl">
+            <a className="bg-pink p-2 px-6 rounded-lg" href="#">Start here!</a>
+          </p>
+        </div>
+
       
       <div className="mt-4 p-6 bg-darkpurp text-lg">
         <div className="flex justify-center items-center ">
@@ -197,7 +227,7 @@ export default function App() {
         </a>
       </div>
       <div className="right-2"> 
-        <p>Art by Elena (19) FORMAT THIS LATER</p>
+        <a href="https://www.instagram.com/aeralixe/?hl=en">Art by Elena Baskakova (18, Boston)</a>
       </div>
       </div>
       
