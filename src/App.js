@@ -17,12 +17,15 @@ import bg5 from "./art/hero/bg5.png";
 import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
-import smoke from "./art/smoke.png";
+import smoke from "./art/smoke.gif";
 
 import apo1 from "./art/images/apo1.png";
 import apo2 from "./art/images/apo2.png";
 import apo3 from "./art/images/apo3.png";
 import apo4 from "./art/images/apo4.png";
+
+import hacker from "./art/cards/hacker.png";
+import musician from "./art/cards/musician.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -50,6 +53,26 @@ export default function App() {
         {init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
         )}
+        <div className="flex justify-center">
+          <div className="max-w-2xl 2xl:max-w-6xl relative w-full">
+            <img src={billboard} alt="Billboard" className="w-full h-auto mt-[5%]" />
+            <img
+              src={title}
+              alt="Counterspell"
+              className="absolute h-auto top-[10%] w-full scale-[85%]"
+            />
+            <img
+              src={smoke}
+              alt="Smoke"
+              className="absolute h-auto -top-[4%] w-full scale-[80%] translate-x-[7.5%]"
+            />
+            <img
+              src={sparks}
+              alt="Sparks"
+              className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
+            />
+          </div>
+        </div>
 
         {/*<p className="text-3xl inter mb-4 mx-4">
           Hack Club's game jam for high schoolers
@@ -69,7 +92,7 @@ export default function App() {
           >
             <div style={{}}>
               <p
-                className="inter text-lg max-w-xs mx-auto"
+                className="inter text-lg max-w-xs mx-auto bg-dark p-4 bg-opacity-60"
                 style={{
                   textShadow:
                     "5px 5px 20px rgba(0, 255, 0, 1), -5px -5px 20px rgba(0, 0, 255, 1), 0px 0px 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1),",
@@ -97,24 +120,71 @@ export default function App() {
             <p className="mb-6 text-4xl">how to play</p>
             <div className="flex justify-center mx-4 my-14">
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center px-4 py-8 inter max-w-6xl grow">
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
-                    <img src="" />
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo1}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
                     1. find your local hackathon using the event locator below
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo2}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
                     2. find a team of other high school students
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo3}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
                     3. build a game from scratch that weekend
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-10 mx-3">
-                  <p className="my-10 mx-5 max-w-44">
+                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                  <div className="justify-center items-center flex flex-col ">
+                    <img
+                      src={apo4}
+                      className="justify-center items-center flex flex-col mb-6"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+
+                  <p className="my-2 mx-5 max-w-44">
                     4. show off your project!
                   </p>
                 </div>
@@ -163,13 +233,33 @@ const Cards = () => {
   return (
     <div className="flex flex-wrap justify-center">
       <Tilt
-        className="bg-lightpurp rounded-lg p-5 m-4"
-        style={{ width: "340px", height: "500px" }}
-      ></Tilt>
+        className="m-4"
+      >
+        <div>
+          <img
+            src={hacker}
+            className="rounded-lg"
+            style={{
+              width: "340px",
+              height: "500px",
+            }}
+          />
+        </div>
+      </Tilt>
       <Tilt
-        className="bg-lightpurp rounded-lg p-5 m-4"
-        style={{ width: "340px", height: "500px" }}
-      ></Tilt>
+        className="m-4"
+      >
+        <div>
+          <img
+            src={musician}
+            className="rounded-lg"
+            style={{
+              width: "340px",
+              height: "500px",
+            }}
+          />
+        </div>
+      </Tilt>
       <Tilt
         className="bg-lightpurp rounded-lg p-5 m-4"
         style={{ width: "340px", height: "500px" }}
