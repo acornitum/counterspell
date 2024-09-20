@@ -108,6 +108,13 @@ export default function App() {
         />
       </div>
 
+      <div className="flex flex-col justify-center text-center m-5 mb-80 neuebit">
+        <p className="text-6xl">
+          Want to <span className="text-blue">organize Counterspell</span> in
+          your city?
+        </p>
+      </div>
+
       <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
         <div className="flex justify-center text-center overflow-hidden">
           <div
@@ -115,16 +122,13 @@ export default function App() {
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
             <div style={{}}>
-              <p
-                className="inter text-4xl max-w-md mx-auto bg-dark p-4 bg-opacity-80"
+              <a
+                className="inter text-7xl mx-auto p-4 flex flex-col neuebit"
                 style={{}}
+                href="#"
               >
-                <b class="neuebit">
-                  Spend a weekend making video games with your friends at our
-                  <span class="text-pink"> beginner-friendly game jam</span>,
-                  where you make games in teams and win prizes!
-                </b>
-              </p>
+                <b className="underline text-pink">START</b>
+              </a>
             </div>
           </div>
         </div>
@@ -155,6 +159,13 @@ export default function App() {
           </p>
           <p className="text-3xl mb-8"></p>
           <Cards />
+          <div className="mt-6">
+            <b class="neuebit text-4xl">
+              Spend a weekend making video games with your friends at our
+              <span class="text-pink"> beginner-friendly game jam</span>, where
+              you make games in teams and win prizes!
+            </b>
+          </div>
         </div>
 
         <div className="flex flex-col justify-center text-center mb-24 neuebit">
@@ -268,18 +279,6 @@ export default function App() {
             className="absolute -z-10"
             style={{ width: "400px", height: "auto", right: 0 }}
           />
-        </div>
-
-        <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
-          <p className="text-6xl">
-            Want to <span className="text-blue">organize Counterspell</span> in
-            your city?
-          </p>
-          <p className="text-6xl">
-            <a className="bg-pink p-2 px-6 rounded-lg" href="#">
-              Start here!
-            </a>
-          </p>
         </div>
 
         <p className="text-6xl flex  justify-center neuebit text-green">
@@ -527,20 +526,23 @@ const HeroScroll = () => {
             alt="Smoke"
             className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[4%]"
           />
-          <img
+          {/*<img
             src={sparks}
             alt="Sparks"
             className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
-          />
-          <div className="flex justify-center text-center">
-            <div className="z-50 absolute top-[41%] text-[50px] tracking-wide bg-[#1D1D1D] leading-[50px]">
-              <p class="text-green neuebit">
+          />*/}
+          <div className="flex justify-center text-center items-center">
+            <div className="z-50 absolute top-[41%] text-[50px] tracking-wide leading-[50px]">
+              <p class="text-pink neuebit bg-[#1D1D1D] ">
                 HACK CLUB'S BEGINNER FRIENDLY{" "}
-                <span className="text-green">GAME JAM</span>
+                <span className="text-pink bg-[#1D1D1D] ">GAME JAM</span>
               </p>
               <p class="text-blue neuebit text-[40px]">
                 NOVEMBER 9-10 | IN-PERSON, IN A CITY NEAR YOU
               </p>
+              <div className="flex justify-center items-center h-full">
+                <img className="w-12 h-auto mt-24 bobbing" src={down} />
+              </div>
             </div>
           </div>
         </div>
