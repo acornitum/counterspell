@@ -6,8 +6,19 @@ import particlesOptions from "./particles.json";
 import { Tilt } from "@jdion/tilt-react";
 import Banner from "@hackclub/banner";
 
-import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
-import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable } from "@dnd-kit/sortable";
+import {
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  useSortable,
+} from "@dnd-kit/sortable";
 import { CSS as dndCSS } from "@dnd-kit/utilities";
 
 import faqData from "./faqData";
@@ -23,6 +34,7 @@ import breakline from "./art/breakline.png";
 import sparks from "./art/sparks.gif";
 import aboutbkgr from "./art/aboutbkgr.png";
 import smoke from "./art/smoke.gif";
+import down from "./art/down.png";
 
 import apo1 from "./art/images/apo1.png";
 import apo2 from "./art/images/apo2.png";
@@ -33,16 +45,16 @@ import apo5 from "./art/images/apo5.png";
 import hacker from "./art/cards/hacker.png";
 import musician from "./art/cards/musician.png";
 
-import flare1 from "./art/flares/flare1.png"
-import flare2 from "./art/flares/flare2.png"
-import flare3 from "./art/flares/flare3.png"
-import flare4 from "./art/flares/flare4.png"
-import flare5 from "./art/flares/flare5.png"
-import flare6 from "./art/flares/flare6.png"
-import flare7 from "./art/flares/flare7.png"
-import flare8 from "./art/flares/flare8.png"
-import flare9 from "./art/flares/flare9.png"
-import flare10 from "./art/flares/flare10.png"
+import flare1 from "./art/flares/flare1.png";
+import flare2 from "./art/flares/flare2.png";
+import flare3 from "./art/flares/flare3.png";
+import flare4 from "./art/flares/flare4.png";
+import flare5 from "./art/flares/flare5.png";
+import flare6 from "./art/flares/flare6.png";
+import flare7 from "./art/flares/flare7.png";
+import flare8 from "./art/flares/flare8.png";
+import flare9 from "./art/flares/flare9.png";
+import flare10 from "./art/flares/flare10.png";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -81,11 +93,19 @@ export default function App() {
       </div>
 
       <div className="relative">
-          <img src={flare1} className="absolute -z-10" style={{width: "300px", height: "auto"}}/>
+        <img
+          src={flare1}
+          className="absolute -z-10"
+          style={{ width: "300px", height: "auto" }}
+        />
       </div>
-      
+
       <div className="relative">
-          <img src={flare2} className="absolute -z-10" style={{width: "300px", height: "auto", right: 0}}/>
+        <img
+          src={flare2}
+          className="absolute -z-10"
+          style={{ width: "300px", height: "auto", right: 0 }}
+        />
       </div>
 
       <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
@@ -101,8 +121,8 @@ export default function App() {
               >
                 <b class="neuebit">
                   Spend a weekend making video games with your friends at our
-                  <span class="text-pink"> beginner-friendly game jam</span>
-                  , where you make games in teams and win prizes!
+                  <span class="text-pink"> beginner-friendly game jam</span>,
+                  where you make games in teams and win prizes!
                 </b>
               </p>
             </div>
@@ -110,10 +130,18 @@ export default function App() {
         </div>
 
         <div className="relative">
-          <img src={flare3} className="absolute -z-10" style={{width: "400px", height: "auto"}}/>
+          <img
+            src={flare3}
+            className="absolute -z-10"
+            style={{ width: "400px", height: "auto" }}
+          />
         </div>
         <div className="relative">
-            <img src={flare4} className="absolute -z-10" style={{width: "400px", height: "auto", right: 0}}/>
+          <img
+            src={flare4}
+            className="absolute -z-10"
+            style={{ width: "400px", height: "auto", right: 0 }}
+          />
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
@@ -226,13 +254,20 @@ export default function App() {
           </div>
         </div>
 
-
         <div className="relative">
-          <img src={flare9} className="absolute -z-10" style={{width: "400px", height: "auto"}}/>
+          <img
+            src={flare9}
+            className="absolute -z-10"
+            style={{ width: "400px", height: "auto" }}
+          />
         </div>
 
         <div className="relative">
-          <img src={flare10} className="absolute -z-10" style={{width: "400px", height: "auto", right: 0}}/>
+          <img
+            src={flare10}
+            className="absolute -z-10"
+            style={{ width: "400px", height: "auto", right: 0 }}
+          />
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
@@ -246,17 +281,22 @@ export default function App() {
             </a>
           </p>
         </div>
-<p className="text-6xl flex  justify-center neuebit text-green">Schedule</p>
+
+        <p className="text-6xl flex  justify-center neuebit text-green">
+          Schedule
+        </p>
         <div className="flex justify-center text-center m-5 my-4 mb-24 neuebit">
-          
-          <table class="table-auto" className="text-5xl text-left border-separate border-spacing-y-4 ">
+          <table
+            class="table-auto"
+            className="text-5xl text-left border-separate border-spacing-y-4 "
+          >
             <tbody>
               <tr>
                 <td>Doors open </td>
                 <td>11:00 AM</td>
               </tr>
               <tr>
-                <td>Opening ceremony</td> 
+                <td>Opening ceremony</td>
                 <td>12:00 PM</td>
               </tr>
               <tr>
@@ -380,14 +420,9 @@ const Cards = () => {
 };
 
 const FaqCard = (props) => {
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
-    transition,
-  } = useSortable({id: props.id});
-  
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id: props.id });
+
   const style = {
     transform: dndCSS.Transform.toString(transform),
     transition,
@@ -396,9 +431,15 @@ const FaqCard = (props) => {
   const faqItem = faqData[props.id - 1];
 
   return (
-    <div className="bg-darkpurp rounded-lg p-5" ref={setNodeRef} style={style} {...attributes} {...listeners}>
+    <div
+      className="bg-darkpurp rounded-lg p-5"
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+    >
       <p className="mb-2 text-xl">{faqItem.question}</p>
-      <p dangerouslySetInnerHTML={{__html: faqItem.answer}}></p>
+      <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
     </div>
   );
 };
@@ -411,33 +452,30 @@ function Faq() {
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates
+      coordinateGetter: sortableKeyboardCoordinates,
     })
-  )
+  );
 
   return (
     <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
-      <DndContext
-        sensors={sensors}
-        onDragEnd={handleDragEnd}
-      >        
-        <SortableContext 
-          items={faqItems}
-        >
-          {faqItems.map(id => <FaqCard id={id} key={id}/>)}
+      <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
+        <SortableContext items={faqItems}>
+          {faqItems.map((id) => (
+            <FaqCard id={id} key={id} />
+          ))}
         </SortableContext>
       </DndContext>
     </div>
   );
 
   function handleDragEnd(event) {
-    const {active, over} = event;
-    
+    const { active, over } = event;
+
     if (active.id !== over.id) {
       setFaqItems((items) => {
         const oldIndex = items.indexOf(active.id);
         const newIndex = items.indexOf(over.id);
-        
+
         return arrayMove(items, oldIndex, newIndex);
       });
     }
@@ -497,7 +535,8 @@ const HeroScroll = () => {
           <div className="flex justify-center text-center">
             <div className="z-50 absolute top-[41%] text-[50px] tracking-wide bg-[#1D1D1D] leading-[50px]">
               <p class="text-green neuebit">
-                HACK CLUB'S BEGINNER FRIENDLY <span className="text-green">GAME JAM</span> 
+                HACK CLUB'S BEGINNER FRIENDLY{" "}
+                <span className="text-green">GAME JAM</span>
               </p>
               <p class="text-blue neuebit text-[40px]">
                 NOVEMBER 9-10 | IN-PERSON, IN A CITY NEAR YOU
