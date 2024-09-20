@@ -36,7 +36,6 @@ export default function App() {
     }
 
     initParticlesEngine(async (engine) => {
-      console.log("particles.js loaded");
       await loadFull(engine);
     }).then(() => {
       setInit(true);
