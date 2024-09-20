@@ -4,8 +4,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import { Tilt } from "@jdion/tilt-react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Banner from "@hackclub/banner";
+
+import { DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
+import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable } from "@dnd-kit/sortable";
+import { CSS as dndCSS } from "@dnd-kit/utilities";
 
 import billboard from "./art/billboard.png";
 import title from "./art/title.png";
@@ -26,6 +29,8 @@ import apo4 from "./art/images/apo4.png";
 
 import hacker from "./art/cards/hacker.png";
 import musician from "./art/cards/musician.png";
+
+import faqData from "./faqData";
 
 export default function App() {
   const [init, setInit] = useState(false);
@@ -176,7 +181,7 @@ export default function App() {
           <div className="m-5">
             <p className="mb-6 text-4xl">frequently asked questions</p>
             <div class="flex justify-center">
-              <Faq2 />
+              <Faq />
             </div>
           </div>
         </div>
@@ -198,15 +203,6 @@ export default function App() {
     </div>
   );
 }
-
-const Faq = ({ question, answer }) => {
-  return (
-    <div className="bg-darkpurp rounded-lg p-5">
-      <p className="mb-2 text-xl">{question}</p>
-      <p>{answer}</p>
-    </div>
-  );
-};
 
 const Cards = () => {
   return (
@@ -247,90 +243,69 @@ const Cards = () => {
   );
 };
 
-function Faq2() {
+const FaqCard = (props) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+  } = useSortable({id: props.id});
+  
+  const style = {
+    transform: dndCSS.Transform.toString(transform),
+    transition,
+  };
+
+  const faqItem = faqData[props.id - 1];
+
   return (
-    <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
-      <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
-          Am I eligible to participate in Counterspell?
-        </p>
-        <p>
-          If you're 18 or under, yes, we are so excited to see you! If you're
-          over 18 but still in high school, shoot us an email at{" "}
-          <a href="mailto:counterspell@hackclub.com">
-            counterspell@hackclub.com.
-          </a>
-        </p>
-      </div>
-      <Faq
-        question="Does participating cost anything?"
-        answer="Nope! We'll have meals, snacks, and beverages onsite at the hackathon, as well as swag, prizes, and fun mini-events."
-      />
-      <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">What has Hack Club done before?</p>
-        <p>
-          We have run multiple events of this scale around the world. Each one,
-          however is special in its own way. The summer of '21, we{" "}
-          <a
-            href="https://www.youtube.com/watch?v=2BID8_pGuqA&ab_channel=HackClub"
-            rel="noopener noreferrer"
-          >
-            chartered a train across America
-          </a>{" "}
-          and ran the world's longest hackathon on land. Last year, we ran an
-          outdoors do-it-yourself camping adventure in Cabot, Vermont. Check it
-          out{" "}
-          <a
-            href="https://www.youtube.com/watch?v=O1s5HqSqKi0&ab_channel=HackClub"
-            rel="noopener noreferrer"
-          >
-            here
-          </a>
-          !
-        </p>
-      </div>
-      <Faq
-        question="What can I make at Counterspell?"
-        answer="At Counterspell, we're building video games of all kinds! The theme will be revealed at the start of the hackathon."
-      />
-      <Faq
-        question="What do I need to bring to Counterspell?"
-        answer="Your laptop, charger, and an open mind! If your location is overnight, also bring toiletries, and a sleeping bag."
-      />
-      <Faq
-        question="I'm not good at coding, can I join?"
-        answer="This hackathon is for hackers of all skill levels! We'll have workshops and other events so join us and let's learn together. If you'd like to start exploring some introductory projects, check out Hack Club Workshops."
-      />
-      <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
-          My parents are worried! What should I do?
-        </p>
-        <p>
-          We're here to help! Ask them to reach out to us at{" "}
-          <a href="mailto:counterspell@hackclub.com">
-            counterspell@hackclub.com
-          </a>{" "}
-          and we'll make sure to answer all their questions!
-        </p>
-      </div>
-      <div className="bg-darkpurp rounded-lg p-5">
-        <p className="mb-2 text-xl">
-          I have more questions, how can I reach out?
-        </p>
-        <p>
-          Contact us! Reach out at{" "}
-          <a href="https://hackclub.com/slack/" rel="noopener noreferrer">
-            #counterspell
-          </a>{" "}
-          on the Hack Club Slack or email us at{" "}
-          <a href="mailto:counterspell@hackclub.com">
-            counterspell@hackclub.com
-          </a>
-          . We're always ready to answer all your questions!
-        </p>
-      </div>
+    <div className="bg-darkpurp rounded-lg p-5" ref={setNodeRef} style={style} {...attributes} {...listeners}>
+      <p className="mb-2 text-xl">{faqItem.question}</p>
+      <p dangerouslySetInnerHTML={{__html: faqItem.answer}}></p>
     </div>
   );
+};
+
+function Faq() {
+  const numFaq = faqData.length;
+  const faqIds = Array.from({ length: numFaq }, (_, i) => i + 1);
+  const [faqItems, setFaqItems] = useState(faqIds);
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates
+    })
+  )
+
+  return (
+    <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
+      <DndContext
+        sensors={sensors}
+        onDragEnd={handleDragEnd}
+      >        
+        <SortableContext 
+          items={faqItems}
+        >
+          {faqItems.map(id => <FaqCard id={id} key={id}/>)}
+        </SortableContext>
+      </DndContext>
+    </div>
+  );
+
+  function handleDragEnd(event) {
+    const {active, over} = event;
+    
+    if (active.id !== over.id) {
+      setFaqItems((items) => {
+        const oldIndex = items.indexOf(active.id);
+        const newIndex = items.indexOf(over.id);
+        
+        return arrayMove(items, oldIndex, newIndex);
+      });
+    }
+  }
 }
 
 const HeroScroll = () => {
