@@ -98,3 +98,7 @@ a:hover {
 .bobbing {
   animation: bobbing 2s infinite; /* Adjust the duration as needed */
 }
+
+.hue-rot {
+  filter: hue-rotate(-60deg) brightness(1.4);
+}

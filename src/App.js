@@ -524,7 +524,7 @@ const HeroScroll = () => {
           <img
             src={smoke}
             alt="Smoke"
-            className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[4%]"
+            className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[5%] hue-rot"
           />
           {/*<img
             src={sparks}
