@@ -100,8 +100,8 @@ export default function App() {
                 style={{}}
               >
                 <b class="neuebit">
-                  Join other teenagers from your city at our{" "}
-                  <span class="gradient-text">beginner-friendly game jam</span>{" "}
+                  Spend a weekend making video games with your friends at our
+                  <span class="text-pink"> beginner-friendly game jam</span>
                   , where you make games in teams and win prizes!
                 </b>
               </p>
@@ -120,7 +120,7 @@ export default function App() {
           <p className="text-6xl">
             <span className="text-blue">Artist</span>,{" "}
             <span className="text-green">Musician</span> or{" "}
-            <span className="text-pink">Hacker</span>?
+            <span className="text-pink">Coder</span>?
           </p>
           <p className="text-6xl">
             Join one of the three guilds when you sign up!
@@ -131,7 +131,7 @@ export default function App() {
 
         <div className="flex flex-col justify-center text-center mb-24 neuebit">
           <div className="m-5">
-            <p className="text-6xl">How to play:</p>
+            <p className="text-6xl">Here's how Counterspell works:</p>
             <div className="flex justify-center mx-4 my-6">
               <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center inter py-8 grow">
                 <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
@@ -245,6 +245,66 @@ export default function App() {
               Start here!
             </a>
           </p>
+        </div>
+<p className="text-6xl flex  justify-center neuebit text-green">Schedule</p>
+        <div className="flex justify-center text-center m-5 my-4 mb-24 neuebit">
+          
+          <table class="table-auto" className="text-5xl text-left border-separate border-spacing-y-4 ">
+            <tbody>
+              <tr>
+                <td>Doors open </td>
+                <td>11:00 AM</td>
+              </tr>
+              <tr>
+                <td>Opening ceremony</td> 
+                <td>12:00 PM</td>
+              </tr>
+              <tr>
+                <td>Lunch</td>
+                <td>12:30 PM</td>
+              </tr>
+              <tr>
+                <td>Start working on your game! &nbsp; &nbsp; &nbsp;</td>
+                <td>1:00 PM</td>
+              </tr>
+              <tr>
+                <td>Gamedev workshop 1</td>
+                <td>2:00 PM</td>
+              </tr>
+              <tr>
+                <td>Activity 1</td>
+                <td>4:00 PM</td>
+              </tr>
+              <tr>
+                <td>Gamedev workshop 2</td>
+                <td>4:00 PM</td>
+              </tr>
+              <tr>
+                <td>Dinner</td>
+                <td>6:00 PM</td>
+              </tr>
+              <tr>
+                <td>Lightning talks</td>
+                <td>8:00 PM</td>
+              </tr>
+              <tr>
+                <td>Midnight Suprise</td>
+                <td>12:00 AM</td>
+              </tr>
+              <tr>
+                <td>Breakfast</td>
+                <td>8:00 AM</td>
+              </tr>
+              <tr>
+                <td>Game demos!</td>
+                <td>10:30 AM</td>
+              </tr>
+              <tr>
+                <td>Closing ceremony</td>
+                <td>12:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div
@@ -422,12 +482,12 @@ const HeroScroll = () => {
           <img
             src={title}
             alt="Counterspell"
-            className="absolute h-auto top-[10%] w-full scale-[85%]"
+            className="absolute h-auto top-[12%] w-[70%] scale-[85%] right-[15%]"
           />
           <img
             src={smoke}
             alt="Smoke"
-            className="absolute h-auto top-[2%] w-full scale-[110%] -translate-x-[1.1%]"
+            className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[4%]"
           />
           <img
             src={sparks}
@@ -435,9 +495,12 @@ const HeroScroll = () => {
             className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
           />
           <div className="flex justify-center text-center">
-            <div className="z-50 absolute top-[55%] text-6xl ">
-              <p class="gradient-text neuebit">
-                NOVEMBER 9-10 | IN-PERSON, WORLDWIDE
+            <div className="z-50 absolute top-[41%] text-[50px] tracking-wide bg-[#1D1D1D] leading-[50px]">
+              <p class="text-green neuebit">
+                HACK CLUB'S BEGINNER FRIENDLY <span className="text-green">GAME JAM</span> 
+              </p>
+              <p class="text-blue neuebit text-[40px]">
+                NOVEMBER 9-10 | IN-PERSON, IN A CITY NEAR YOU
               </p>
             </div>
           </div>
