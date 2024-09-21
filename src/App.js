@@ -73,7 +73,7 @@ export default function App() {
   return (
     <div>
       <div class="absolute top-0 left-0 w-[25%] md:w-60 2xl:w-96">
-        <Banner style={{width: "100%"}}/>
+        <Banner style={{ width: "100%" }} />
       </div>
       <div
         class="landing"
@@ -109,29 +109,25 @@ export default function App() {
           style={{ width: "300px", height: "auto", right: 0 }}
         />
       </div>
+      <div className="mt-8 lg:-mt-32 2xl:-mt-64 3xl:-mt-96">
+        <div className="flex flex-col justify-center text-center m-5 neuebit">
+          <p className="text-6xl">
+            Want to <span className="text-blue">organize Counterspell</span> in
+            your city?
+          </p>
+        </div>
 
-      <div className="flex flex-col justify-center text-center m-5 mb-80 neuebit">
-        <p className="text-6xl">
-          Want to <span className="text-blue">organize Counterspell</span> in
-          your city?
-        </p>
-      </div>
-
-      <div className="-mt-5 sm:-mt-12 md:-mt-32 2xl:-mt-80">
         <div className="flex justify-center text-center overflow-hidden">
           <div
-            className="m-5 max-w-6xl min-w-[500px] grow bg-no-repeat bg-contain bg-center py-12 sm:pt-32 lg:py-64 clear"
+            className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <div style={{}}>
-              <a
-                className="inter text-7xl mx-auto p-4 flex flex-col neuebit"
-                style={{}}
-                href="#"
-              >
-                <b className="underline text-pink">START</b>
-              </a>
-            </div>
+            <a
+              className="text-7xl neuebit underline text-pink"
+              href="#"
+            >
+              START
+            </a>
           </div>
         </div>
 
