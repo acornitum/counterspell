@@ -264,24 +264,24 @@ export default function App() {
           <img
             src={flare9}
             alt=""
-            className="absolute -z-10 -mt-40 lg:mt-0 w-[300px] xl:w-[400px] h-auto"
+            className="absolute -z-10 -mt-24 sm:-mt-40 lg:mt-0 w-[200px] sm:w-[300px] xl:w-[400px] h-auto -left-12 sm:left-0"
           />
         </div>
         <div className="relative">
           <img
             src={flare10}
             alt=""
-            className="absolute -z-10 -mt-32 lg:mt-0 w-[300px] xl:w-[400px] h-auto right-0"
+            className="absolute -z-10 -mt-24 sm:-mt-32 lg:mt-0 w-[200px] sm:w-[300px] xl:w-[400px] h-auto -right-12 sm:right-0"
           />
         </div>
 
         <p className="text-6xl flex justify-center neuebit text-green">
           Schedule
         </p>
-        <div className="flex justify-center text-center m-5 mt-20 xl:mt-4 my-4 mb-24 neuebit">
+        <div className="flex justify-center text-center m-5 mt-8 sm:mt-20 xl:mt-4 my-4 mb-24 neuebit">
           <table
             class="table-auto"
-            className="text-5xl text-left border-separate border-spacing-y-4 "
+            className="text-2xl xs:text-3xl sm:text-5xl text-left border-separate border-spacing-y-1 xs:border-spacing-y-4 "
           >
             <tbody>
               <tr>
