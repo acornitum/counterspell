@@ -72,7 +72,9 @@ export default function App() {
   }, []);
   return (
     <div>
-      <Banner />
+      <div class="absolute top-0 left-0 w-[25%] md:w-60 2xl:w-96">
+        <Banner style={{width: "100%"}}/>
+      </div>
       <div
         class="landing"
         className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10 overflow-hidden select-none pointer-events-none"
@@ -532,12 +534,12 @@ const HeroScroll = () => {
             className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
           />*/}
           <div className="flex justify-center text-center items-center">
-            <div className="z-50 absolute top-[41%] text-[50px] tracking-wide leading-[50px]">
+            <div className="z-50 absolute top-[41%] text-[15px] xs:text-[20px] sm:text-[25px] 2xl:text-[50px] tracking-wide leading-[18px] xs:leading-[25px] sm:leading-[30px] 2xl:leading-[50px]">
               <p class="text-pink neuebit bg-[#1D1D1D] ">
                 HACK CLUB'S BEGINNER FRIENDLY{" "}
                 <span className="text-pink bg-[#1D1D1D] ">GAME JAM</span>
               </p>
-              <p class="text-blue neuebit text-[40px]">
+              <p class="text-blue neuebit text-[12px] xs:text-[17px] sm:text-[20px] 2xl:text-[40px] bg-[#1D1D1D]">
                 NOVEMBER 9-10 | IN-PERSON, IN A CITY NEAR YOU
               </p>
               <div className="flex justify-center items-center h-full">
