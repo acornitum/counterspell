@@ -122,10 +122,7 @@ export default function App() {
             className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <a
-              className="text-7xl neuebit underline text-pink"
-              href="#"
-            >
+            <a className="text-7xl neuebit underline text-pink" href="#">
               START
             </a>
           </div>
@@ -266,23 +263,22 @@ export default function App() {
         <div className="relative">
           <img
             src={flare9}
-            className="absolute -z-10"
-            style={{ width: "400px", height: "auto" }}
+            alt=""
+            className="absolute -z-10 -mt-40 lg:mt-0 w-[300px] xl:w-[400px] h-auto"
           />
         </div>
-
         <div className="relative">
           <img
             src={flare10}
-            className="absolute -z-10"
-            style={{ width: "400px", height: "auto", right: 0 }}
+            alt=""
+            className="absolute -z-10 -mt-32 lg:mt-0 w-[300px] xl:w-[400px] h-auto right-0"
           />
         </div>
 
-        <p className="text-6xl flex  justify-center neuebit text-green">
+        <p className="text-6xl flex justify-center neuebit text-green">
           Schedule
         </p>
-        <div className="flex justify-center text-center m-5 my-4 mb-24 neuebit">
+        <div className="flex justify-center text-center m-5 mt-20 xl:mt-4 my-4 mb-24 neuebit">
           <table
             class="table-auto"
             className="text-5xl text-left border-separate border-spacing-y-4 "
