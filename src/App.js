@@ -378,7 +378,7 @@ export default function App() {
             Instagram
           </a>
         </div>
-        <div className="right-2">
+        <div className="text-center">
           <a href="https://www.instagram.com/aeralixe/?hl=en">
             Art by Elena Baskakova (18, Boston)
           </a>
