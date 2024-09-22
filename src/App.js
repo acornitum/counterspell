@@ -534,7 +534,7 @@ const HeroScroll = () => {
           <div className="flex justify-center text-center items-center">
             <div className="z-50 absolute top-[41%] text-[50px] tracking-wide leading-[50px]">
               <p class="text-pink neuebit bg-[#1D1D1D] ">
-                HACK CLUB'S BEGINNER FRIENDLY{" "}
+                BEGINNER FRIENDLY{" "}
                 <span className="text-pink bg-[#1D1D1D] ">GAME JAM</span>
               </p>
               <p class="text-blue neuebit text-[40px]">
