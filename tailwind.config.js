@@ -11,7 +11,11 @@ module.exports = {
         lightpurp: '#6370F5',
         darkpurp: '#443D87',
         dark: '#0A081E'
-      }
+      },
+      screens: {
+        'xs': '480px',
+        '3xl': '2000px',
+      },
     },
   },
   plugins: [],
