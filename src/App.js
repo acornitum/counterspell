@@ -56,6 +56,17 @@ import flare8 from "./art/flares/flare8.png";
 import flare9 from "./art/flares/flare9.png";
 import flare10 from "./art/flares/flare10.png";
 
+import faq1 from "./art/faqbkgr/faq1.png";
+import faq2 from "./art/faqbkgr/faq2.png";
+import faq3 from "./art/faqbkgr/faq3.png";
+import faq4 from "./art/faqbkgr/faq4.png";
+import faq5 from "./art/faqbkgr/faq5.png";
+import faq6 from "./art/faqbkgr/faq6.png";
+import faq7 from "./art/faqbkgr/faq7.png";
+import faq8 from "./art/faqbkgr/faq8.png";
+
+const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
+
 export default function App() {
   const [init, setInit] = useState(false);
 
@@ -415,17 +426,20 @@ const Cards = () => {
 const FaqCard = (props) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: props.id });
-
+  
+  const faqBkgr = props.bkgrs ? faqBkgrs[props.bkgrs[props.id - 1]-1] : null;
+  
   const style = {
     transform: dndCSS.Transform.toString(transform),
     transition,
+    backgroundImage: faqBkgr ? `url(${faqBkgr})` : undefined,
   };
 
   const faqItem = faqData[props.id - 1];
 
   return (
     <div
-      className="bg-darkpurp rounded-lg p-5"
+      className="bg-darkpurp p-5 sm:w-[445px] sm:h-[280px] bg-cover bg-center"
       ref={setNodeRef}
       style={style}
       {...attributes}
@@ -441,6 +455,26 @@ function Faq() {
   const numFaq = faqData.length;
   const faqIds = Array.from({ length: numFaq }, (_, i) => i + 1);
   const [faqItems, setFaqItems] = useState(faqIds);
+  const [randomFaqBkgrs, setRandomFaqBkgrs] = useState([]);
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [correctOrder, setCorrectOrder] = useState([]);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    const randArray = Array.from({ length: numFaq }, (_, i) => i + 1).sort(
+      () => Math.random() - 0.5
+    );
+    setRandomFaqBkgrs(randArray);
+    const correct = faqIds.sort((a, b) => randArray[a - 1] - randArray[b - 1]);
+    setCorrectOrder(correct);
+  }, []);
+
+  useEffect(() => {
+    if (JSON.stringify(faqItems) === JSON.stringify(correctOrder)) {
+      console.log("faq solved 🎉");
+    }
+
+  }, [faqItems, correctOrder]);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -450,14 +484,20 @@ function Faq() {
   );
 
   return (
-    <div className="p-5 gap-8 inter grid lg:grid-cols-2 max-w-xl lg:max-w-6xl grow grid-rows-8 lg:grid-rows-4">
-      <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
-        <SortableContext items={faqItems}>
-          {faqItems.map((id) => (
-            <FaqCard id={id} key={id} />
-          ))}
-        </SortableContext>
-      </DndContext>
+    <div className="p-5 gap-8 inter grid lg:grid-cols-2">
+      {screenWidth > 640 ? (
+        <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
+          <SortableContext items={faqItems}>
+            {faqItems.map((id) => (
+              <FaqCard id={id} key={id} bkgrs={randomFaqBkgrs} />
+            ))}
+          </SortableContext>
+        </DndContext>
+      ) : (
+        faqItems.map((id) => (
+          <FaqCard id={id} key={id} />
+        ))
+      )}
     </div>
   );
 
