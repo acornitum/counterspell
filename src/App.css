@@ -101,5 +101,5 @@ a:hover {
 }
 
 .hue-rot {
-  filter: hue-rotate(-60deg) brightness(1.4);
+  filter: hue-rotate(-65deg) brightness(1.8);
 }
