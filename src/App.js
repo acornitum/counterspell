@@ -114,6 +114,7 @@ export default function App() {
       <div className="relative">
         <img
           src={flare3}
+          alt=""
           className="absolute -z-10"
           style={{ width: "300px", height: "auto" }}
         />
@@ -122,6 +123,7 @@ export default function App() {
       <div className="relative">
         <img
           src={flare4}
+          alt=""
           className="absolute -z-10"
           style={{ width: "300px", height: "auto", right: 0 }}
         />
@@ -153,6 +155,7 @@ export default function App() {
         <div className="relative">
           <img
             src={torch1}
+            alt=""
             className="absolute -z-10"
             style={{ width: "200px", height: "auto" }}
           />
@@ -160,6 +163,7 @@ export default function App() {
         <div className="relative">
           <img
             src={torch2}
+            alt=""
             className="absolute -z-10"
             style={{ width: "200px", height: "auto", right: 0 }}
           />
@@ -170,9 +174,8 @@ export default function App() {
 <div className="neuebit my-44 mx-5">
           <div className="flex justify-center items-center text-center">
             <p className="text-6xl mb-4">
-              Happening simultaneously in{" "}
-              <span className="text-pink">50 different cities</span>, including:
-            </p>{" "}
+              Happening simultaneously in <span className="text-pink">50 different cities</span>, including:
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center text-4xl text-center">
 
@@ -203,9 +206,9 @@ export default function App() {
 
         <div className="flex flex-col justify-center text-center m-20 my-24 neuebit">
           <p className="text-6xl">
-            <span className="text-blue">Artist</span>,{" "}
-            <span className="text-green">Musician</span> or{" "}
-            <span className="text-pink">Coder</span>?
+            <span className="text-blue">Artist</span>,
+            <span className="text-green"> Musician </span> or
+            <span className="text-pink"> Coder</span>?
           </p>
           <p className="text-6xl">
             Join one of the three guilds when you sign up!
@@ -235,6 +238,7 @@ export default function App() {
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo1}
+                      alt=""
                       className="justify-center items-center flex flex-col mb-6"
                       style={{
                         width: "200px",
@@ -252,6 +256,7 @@ export default function App() {
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo2}
+                      alt=""
                       className="justify-center items-center flex flex-col mb-6"
                       style={{
                         width: "200px",
@@ -269,6 +274,7 @@ export default function App() {
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo3}
+                      alt=""
                       className="justify-center items-center flex flex-col mb-6"
                       style={{
                         width: "200px",
@@ -286,6 +292,7 @@ export default function App() {
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo5}
+                      alt=""
                       className="justify-center items-center flex flex-col mb-6"
                       style={{
                         width: "200px",
@@ -304,6 +311,7 @@ export default function App() {
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo4}
+                      alt=""
                       className="justify-center items-center flex flex-col mb-6"
                       style={{
                         width: "200px",
@@ -674,7 +682,7 @@ const HeroScroll = () => {
                 NOVEMBER 9-10, 2024, IN 200+ CITIES
               </p>
               <div className="flex justify-center items-center h-full">
-                <img className="w-12 h-auto mt-24 bobbing" src={down} />
+                <img className="w-12 h-auto mt-24 bobbing" alt="" src={down} />
               </div>
             </div>
           </div>
