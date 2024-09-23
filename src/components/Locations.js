@@ -4,7 +4,7 @@ export default function Locations() {
       <div className="flex justify-center items-center text-center">
         <p className="text-6xl mb-4">
           Happening simultaneously in{" "}
-          <span className="text-pink">50 different cities</span>, including:
+          <span className="text-pink">100 different cities</span>, including:
         </p>
       </div>
       <div className="flex flex-col justify-center items-center text-4xl text-center">
