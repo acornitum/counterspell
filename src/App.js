@@ -475,11 +475,8 @@ const Cards = () => {
         <div>
           <img
             src={artist}
-            className="rounded-lg"
-            style={{
-              width: "340px",
-              height: "500px",
-            }}
+            alt="Artist card"
+            className="rounded-lg max-w-[340px]"
           />
         </div>
       </Tilt>
@@ -487,11 +484,8 @@ const Cards = () => {
         <div>
           <img
             src={musician}
-            className="rounded-lg"
-            style={{
-              width: "340px",
-              height: "500px",
-            }}
+            alt="Musician card"
+            className="rounded-lg max-w-[340px]"
           />
         </div>
       </Tilt>
@@ -499,11 +493,8 @@ const Cards = () => {
         <div>
           <img
             src={hacker}
-            className="rounded-lg"
-            style={{
-              width: "340px",
-              height: "500px",
-            }}
+            alt="Hacker card"
+            className="rounded-lg  max-w-[340px]"
           />
         </div>
       </Tilt>
