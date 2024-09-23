@@ -211,7 +211,7 @@ export default function App() {
           <Cards />
           <div className="mt-6">
             <b class="neuebit text-4xl">
-              Spend a weekend making video games with your friends at our
+            Spend a weekend making video games with your friends at our
               <span class="text-pink"> beginner-friendly game jam</span>, where
               you make games and win prizes!
             </b>
@@ -411,7 +411,19 @@ export default function App() {
         </div>
       </div>
 
-      <div className="mt-4 p-6 bg-darkpurp text-lg">
+      {/*<div className="neuebit my-20 mx-5">
+          <div className="flex justify-center items-center text-center">
+            <p className="text-3xl mb-4">
+              Photos from past Hack Club hackathons:
+            </p>{" "}
+          </div>
+          <div>
+
+          </div>
+
+      </div> */}
+
+      <div className="mt-4 p-6 bg-darkpurp text-2xl neuebit">
         <div className="flex justify-center items-center ">
           <a
             href="https://hackclub.com"
@@ -445,9 +457,10 @@ export default function App() {
             href="https://www.instagram.com/aeralixe/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
+            className="mx-2"
           >
             Art by Elena Baskakova (18, Boston)
-          </a>
+          </a> | <a href="https://github.com/acornitum/counterspell" target="_blank" rel="noopener noreferrer" className="mx-2">Site built by Hack Clubbers</a>
         </div>
       </div>
     </div>
