@@ -454,7 +454,7 @@ const FaqCard = (props) => {
       {...listeners}
     >
       <div className="p-5 h-full">
-        <div className="h-full bg-black/20 p-3 flex flex-col justify-center">
+        <div className="h-full p-3 flex flex-col justify-center">
           <p className="mb-2 text-xl">{faqItem.question}</p>
           <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
         </div>
