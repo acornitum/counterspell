@@ -1968,6 +1968,28 @@
     "@tsparticles/updater-out-modes" "^3.5.0"
     "@tsparticles/updater-size" "^3.5.0"
 
+"@tsparticles/confetti@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@tsparticles/confetti/-/confetti-3.5.0.tgz#4486605fc9691e27bcd2fa7665ebd18bd1974ec6"
+  integrity sha512-wS3nqtanbCvAbNlyAffKJq6lgIPzHFljEOO3JSCDgRD6rG5X/jvidhw2vR3kLrjBTV40c+Xv6MpJgSgTRWkogg==
+  dependencies:
+    "@tsparticles/basic" "^3.5.0"
+    "@tsparticles/engine" "^3.5.0"
+    "@tsparticles/plugin-emitters" "^3.5.0"
+    "@tsparticles/plugin-motion" "^3.5.0"
+    "@tsparticles/shape-cards" "^3.5.0"
+    "@tsparticles/shape-emoji" "^3.5.0"
+    "@tsparticles/shape-heart" "^3.5.0"
+    "@tsparticles/shape-image" "^3.5.0"
+    "@tsparticles/shape-polygon" "^3.5.0"
+    "@tsparticles/shape-square" "^3.5.0"
+    "@tsparticles/shape-star" "^3.5.0"
+    "@tsparticles/updater-life" "^3.5.0"
+    "@tsparticles/updater-roll" "^3.5.0"
+    "@tsparticles/updater-rotate" "^3.5.0"
+    "@tsparticles/updater-tilt" "^3.5.0"
+    "@tsparticles/updater-wobble" "^3.5.0"
+
 "@tsparticles/engine@^3.5.0":
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@tsparticles/engine/-/engine-3.5.0.tgz#5de20741cc17193bc7a0b84e81dfd831c3d39364"
@@ -2122,10 +2144,24 @@
   dependencies:
     "@tsparticles/engine" "^3.5.0"
 
+"@tsparticles/plugin-motion@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@tsparticles/plugin-motion/-/plugin-motion-3.5.0.tgz#02fcbab9f6402ed5705122143452af7a727f6834"
+  integrity sha512-juP8f9ABjlhQmg4SO+tTofLYJwvwLPfKWJYvG8c6HU2rlJxJ/6eeWe9kDpv/T8nun3kXYHtrLhcJAmvWg/b5qA==
+  dependencies:
+    "@tsparticles/engine" "^3.5.0"
+
 "@tsparticles/react@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@tsparticles/react/-/react-3.0.0.tgz#d0a794ba53164eb39ce88a3961be723a636b37c0"
   integrity sha512-hjGEtTT1cwv6BcjL+GcVgH++KYs52bIuQGW3PWv7z3tMa8g0bd6RI/vWSLj7p//NZ3uTjEIeilYIUPBh7Jfq/Q==
+
+"@tsparticles/shape-cards@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@tsparticles/shape-cards/-/shape-cards-3.5.0.tgz#4bc66d4cbdf794d661f874725f1eeb3d10da2314"
+  integrity sha512-rU7rp1Yn1leHpCNA/7vrfY6tcLjvrG6A6sOT11dSanIj2J8zgLNXnbVtRJPtU13x+masft9Ta1tpw3dFRdtHcA==
+  dependencies:
+    "@tsparticles/engine" "^3.5.0"
 
 "@tsparticles/shape-circle@^3.5.0":
   version "3.5.0"
@@ -2138,6 +2174,13 @@
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@tsparticles/shape-emoji/-/shape-emoji-3.5.0.tgz#bd4ee417f9d7bc46d3bcbe4852b9c3d767b00fab"
   integrity sha512-cxWHxQxnG5vLDltkoxdo7KS87uKPwQgf4SDWy/WCxW4Psm1TEeeSGYMJPVed+wWPspOKmLb7u8OaEexgE2pHHQ==
+  dependencies:
+    "@tsparticles/engine" "^3.5.0"
+
+"@tsparticles/shape-heart@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@tsparticles/shape-heart/-/shape-heart-3.5.0.tgz#763cd230b4fb479eeacf72bb20578f413c77c6c7"
+  integrity sha512-MvOxW6X7w1jHH+KRJShvHMDhRZ+bpei2mAqQOFR5HY+2D6KFzaDVgtfGFwoiaX8Pm6oP6OQssQ3QnDtrywLRFw==
   dependencies:
     "@tsparticles/engine" "^3.5.0"
 

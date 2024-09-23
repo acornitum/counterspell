@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
+import { confetti } from "@tsparticles/confetti";
 import particlesOptions from "./particles.json";
 import { Tilt } from 'react-next-tilt';
 import Banner from "@hackclub/banner";
@@ -81,6 +82,7 @@ export default function App() {
       setInit(true);
     });
   }, []);
+
   return (
     <div>
       <div class="absolute top-0 left-0 w-[25%] md:w-60 2xl:w-96">
@@ -421,7 +423,7 @@ const Cards = () => {
       >
         <div
           className="bg-lightpurp rounded-lg p-5"
-        style={{ width: "340px", height: "500px" }}
+          style={{ width: "340px", height: "500px" }}
         >
         </div>
       </Tilt>
@@ -464,6 +466,7 @@ function Faq() {
   const [randomFaqBkgrs, setRandomFaqBkgrs] = useState([]);
   const [screenWidth, setScreenWidth] = useState(0);
   const [correctOrder, setCorrectOrder] = useState([]);
+  const [prevSolved, setPrevSolved] = useState(false);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -471,15 +474,21 @@ function Faq() {
       () => Math.random() - 0.5
     );
     setRandomFaqBkgrs(randArray);
-    const correct = faqIds.sort((a, b) => randArray[a - 1] - randArray[b - 1]);
+    const correct = faqIds.toSorted((a, b) => randArray[a - 1] - randArray[b - 1]);
     setCorrectOrder(correct);
   }, []);
 
   useEffect(() => {
-    if (JSON.stringify(faqItems) === JSON.stringify(correctOrder)) {
-      console.log("faq solved 🎉");
+    if (!prevSolved && JSON.stringify(faqItems) === JSON.stringify(correctOrder)) {
+      confetti({
+        particleCount: 300,
+        spread: 160,
+        origin: { y: 1 },
+        startVelocity: 75,
+        colors: ["#65FF96", "#43DDFF", "#2A2AFF", "#FF4387"],
+      });
+      setPrevSolved(true);
     }
-
   }, [faqItems, correctOrder]);
 
   const sensors = useSensors(
