@@ -447,7 +447,7 @@ const FaqCard = (props) => {
 
   return (
     <div
-      className="bg-darkpurp p-5 sm:w-[445px] sm:h-[280px] bg-cover bg-center"
+      className="bg-darkpurp p-5 max-w-lg lg:w-[445px] lg:h-[280px] bg-cover bg-center"
       ref={setNodeRef}
       style={style}
       {...attributes}
@@ -500,7 +500,7 @@ function Faq() {
 
   return (
     <div className="p-5 gap-8 inter grid lg:grid-cols-2">
-      {screenWidth > 640 ? (
+      {screenWidth > 1024 ? (
         <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
           <SortableContext items={faqItems}>
             {faqItems.map((id) => (
