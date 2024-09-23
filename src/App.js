@@ -135,7 +135,7 @@ export default function App() {
             className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <a className="text-7xl neuebit underline text-pink" href="#">
+            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="#">
               START
             </a>
           </div>
