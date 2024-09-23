@@ -45,6 +45,7 @@ import apo5 from "./art/images/apo5.png";
 
 import hacker from "./art/cards/hacker.png";
 import musician from "./art/cards/musician.png";
+import artist from "./art/cards/artist.png"
 
 import flare1 from "./art/flares/flare1.png";
 import flare2 from "./art/flares/flare2.png";
@@ -473,7 +474,7 @@ const Cards = () => {
       <Tilt className="m-4" scale={1.1}>
         <div>
           <img
-            src={hacker}
+            src={artist}
             className="rounded-lg"
             style={{
               width: "340px",
@@ -494,11 +495,17 @@ const Cards = () => {
           />
         </div>
       </Tilt>
-      <Tilt className="m-4" scale={1.1}>
-        <div
-          className="bg-lightpurp rounded-lg p-5"
-          style={{ width: "340px", height: "500px" }}
-        ></div>
+      <Tilt className="m-4 rounded-lg" scale={1.1}>
+        <div>
+          <img
+            src={hacker}
+            className="rounded-lg"
+            style={{
+              width: "340px",
+              height: "500px",
+            }}
+          />
+        </div>
       </Tilt>
     </div>
   );

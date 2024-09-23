@@ -29,7 +29,7 @@ const faqData = [
         answer: `Your laptop, charger, and an open mind! If your location is overnight, also bring toiletries, and a sleeping bag.`,
     },
     {
-        question: "My parents are worried?",
+        question: "My parents are worried!",
         answer: `We're here to help! Ask them to reach out to us at
           <a href="mailto:counterspell@hackclub.com">counterspell@hackclub.com</a>
           and we'll make sure to answer all their questions!`,
