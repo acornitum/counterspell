@@ -4,7 +4,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { confetti } from "@tsparticles/confetti";
 import particlesOptions from "./particles.json";
-import { Tilt } from 'react-next-tilt';
+import { Tilt } from "react-next-tilt";
 import Banner from "@hackclub/banner";
 
 import {
@@ -135,45 +135,64 @@ export default function App() {
             className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="https://forms.hackclub.com/t/5Q4tvcSYycus" target="_blank" rel="noopener noreferrer">
+            <a
+              className="text-7xl neuebit underline text-pink -ml-[15px]"
+              href="https://forms.hackclub.com/t/5Q4tvcSYycus"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               START
             </a>
           </div>
         </div>
 
-        {/*<div className="relative">
+        <div className="relative">
           <img
-            src={flare3}
+            src={flare9}
             className="absolute -z-10"
             style={{ width: "400px", height: "auto" }}
           />
         </div>
         <div className="relative">
           <img
-            src={flare4}
+            src={flare10}
             className="absolute -z-10"
             style={{ width: "400px", height: "auto", right: 0 }}
           />
-        </div>*/}
+        </div>
 
-        <div className="neuebit m-44">
+        <div className="neuebit my-44 mx-5">
           <div className="flex justify-center items-center text-center">
-            <p className="text-6xl">Happening simultaneously in <span className="text-pink">50 different cities</span>, including:</p> {/* happening simultaneously in 50 diff cities */}
+            <p className="text-6xl mb-4">
+              Happening simultaneously in{" "}
+              <span className="text-pink">50 different cities</span>, including:
+            </p>{" "}
           </div>
-          <div className="flex flex-wrap justify-center items-center text-4xl">
-            <p className="m-4">Boston, MA</p>
-            <p className="m-4">New York City, NY</p>
-            <p className="m-4">Ottawa, ON</p>
-            <p className="m-4">Basking Ridge, NJ</p>
-            <p className="m-4">Austin, TX</p>
-            <p className="m-4">San Francisco, CA</p>
-            <p className="m-4">Burlington, VT</p>
-            <p className="m-4">Oshkosh, WI</p>
-          </div>
-          <div className="flex justify-center items-center text-center text-4xl">
-            <p>Don't see your own city? <a className="text-pink" href="https://forms.hackclub.com/t/5Q4tvcSYycus" target="_blank" rel="noopener noreferrer">Organize it yourself!</a></p>
-          </div>
+          <div className="flex flex-col justify-center items-center text-4xl text-center">
 
+              <p className="inline-block whitespace-nowrap">Boston, MA</p>
+              <p className="inline-block whitespace-nowrap">New York City, NY</p>
+              <p className="inline-block whitespace-nowrap">Ottawa, ON</p>
+              <p className="inline-block whitespace-nowrap">Basking Ridge, NJ</p>
+              <p className="inline-block whitespace-nowrap">Austin, TX</p>
+              <p className="inline-block whitespace-nowrap">San Francisco, CA</p>
+              <p className="inline-block whitespace-nowrap">Burlington, VT</p>
+              <p className="inline-block whitespace-nowrap">Oshkosh, WI</p>
+
+          </div>
+          <div className="flex justify-center items-center text-center text-4xl mt-4">
+            <p>
+              Don't see your own city?{" "}
+              <a
+                className="text-pink"
+                href="https://forms.hackclub.com/t/5Q4tvcSYycus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Organize it yourself!
+              </a>
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col justify-center text-center m-20 my-24 neuebit">
@@ -382,27 +401,48 @@ export default function App() {
             <div class="flex justify-center">
               <Faq />
             </div>
-            <p className="text-2xl">Drag around the FAQ boxes to solve a puzzle!</p>
+            <p className="text-2xl">
+              Drag around the FAQ boxes to solve a puzzle!
+            </p>
           </div>
         </div>
       </div>
 
       <div className="mt-4 p-6 bg-darkpurp text-lg">
         <div className="flex justify-center items-center ">
-          <a href="https://hackclub.com" target="_blank"rel="noopener noreferrer" className="mx-4">
+          <a
+            href="https://hackclub.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4"
+          >
             Hack Club
           </a>{" "}
           |{" "}
-          <a href="https://hackclub.com/slack/" target="_blank" rel="noopener noreferrer" className="mx-4">
+          <a
+            href="https://hackclub.com/slack/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4"
+          >
             Slack
           </a>{" "}
           |{" "}
-          <a href="https://www.instagram.com/starthackclub/" target="_blank" rel="noopener noreferrer" className="mx-4">
+          <a
+            href="https://www.instagram.com/starthackclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4"
+          >
             Instagram
           </a>
         </div>
         <div className="text-center">
-          <a href="https://www.instagram.com/aeralixe/?hl=en" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/aeralixe/?hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Art by Elena Baskakova (18, Boston)
           </a>
         </div>
@@ -438,15 +478,11 @@ const Cards = () => {
           />
         </div>
       </Tilt>
-      <Tilt
-        className="m-4"
-        scale={1.1}
-      >
+      <Tilt className="m-4" scale={1.1}>
         <div
           className="bg-lightpurp rounded-lg p-5"
           style={{ width: "340px", height: "500px" }}
-        >
-        </div>
+        ></div>
       </Tilt>
     </div>
   );
@@ -455,9 +491,9 @@ const Cards = () => {
 const FaqCard = (props) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: props.id });
-  
-  const faqBkgr = props.bkgrs ? faqBkgrs[props.bkgrs[props.id - 1]-1] : null;
-  
+
+  const faqBkgr = props.bkgrs ? faqBkgrs[props.bkgrs[props.id - 1] - 1] : null;
+
   const style = {
     transform: dndCSS.Transform.toString(transform),
     transition,
@@ -499,12 +535,17 @@ function Faq() {
       () => Math.random() - 0.5
     );
     setRandomFaqBkgrs(randArray);
-    const correct = faqIds.toSorted((a, b) => randArray[a - 1] - randArray[b - 1]);
+    const correct = faqIds.toSorted(
+      (a, b) => randArray[a - 1] - randArray[b - 1]
+    );
     setCorrectOrder(correct);
   }, []);
 
   useEffect(() => {
-    if (!prevSolved && JSON.stringify(faqItems) === JSON.stringify(correctOrder)) {
+    if (
+      !prevSolved &&
+      JSON.stringify(faqItems) === JSON.stringify(correctOrder)
+    ) {
       confetti({
         particleCount: 300,
         spread: 160,
@@ -534,9 +575,7 @@ function Faq() {
           </SortableContext>
         </DndContext>
       ) : (
-        faqItems.map((id) => (
-          <FaqCard id={id} key={id} />
-        ))
+        faqItems.map((id) => <FaqCard id={id} key={id} />)
       )}
     </div>
   );
