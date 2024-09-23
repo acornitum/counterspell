@@ -587,7 +587,7 @@ const HeroScroll = () => {
           <div className="flex justify-center text-center items-center">
             <div className="z-50 absolute top-[41%] text-[15px] xs:text-[20px] sm:text-[25px] 2xl:text-[50px] tracking-wide leading-[18px] xs:leading-[25px] sm:leading-[30px] 2xl:leading-[50px]">
               <p class="text-pink neuebit">
-                BEGINNER FRIENDLY{" "}
+                FREE BEGINNER FRIENDLY{" "}
                 <span className="text-pink">GAME JAM</span>
               </p>
               <p class="text-blue neuebit text-[12px] xs:text-[17px] sm:text-[20px] 2xl:text-[40px]">
