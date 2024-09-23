@@ -447,14 +447,18 @@ const FaqCard = (props) => {
 
   return (
     <div
-      className="bg-darkpurp p-5 max-w-lg lg:w-[445px] lg:h-[280px] bg-cover bg-center"
+      className="bg-darkpurp max-w-lg lg:w-[445px] lg:h-[280px] bg-cover bg-center"
       ref={setNodeRef}
       style={style}
       {...attributes}
       {...listeners}
     >
-      <p className="mb-2 text-xl">{faqItem.question}</p>
-      <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
+      <div className="p-5 h-full">
+        <div className="h-full bg-black/20 p-3 flex flex-col justify-center">
+          <p className="mb-2 text-xl">{faqItem.question}</p>
+          <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
+        </div>
+      </div>
     </div>
   );
 };
