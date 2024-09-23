@@ -213,7 +213,7 @@ export default function App() {
             <b class="neuebit text-4xl">
               Spend a weekend making video games with your friends at our
               <span class="text-pink"> beginner-friendly game jam</span>, where
-              you make games in teams and win prizes!
+              you make games and win prizes!
             </b>
           </div>
         </div>
@@ -222,8 +222,8 @@ export default function App() {
           <div className="m-5">
             <p className="text-6xl">Here's how Counterspell works:</p>
             <div className="flex justify-center mx-4 my-6">
-              <div className="border-4 rounded-lg border-lightpurp flex flex-wrap items-center justify-center inter py-8 grow">
-                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+              <div className="border-4 rounded-md border-lightpurp flex flex-wrap items-center justify-center inter py-8 grow">
+                <div className="bg-darkpurp rounded-sm my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo1}
@@ -231,7 +231,7 @@ export default function App() {
                       style={{
                         width: "200px",
                         height: "auto",
-                        borderRadius: "10px",
+                        borderRadius: "2px",
                       }}
                     />
                   </div>
@@ -240,7 +240,7 @@ export default function App() {
                     1. Sign up for a Counterspell Event in your city
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                <div className="bg-darkpurp rounded-sm my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo2}
@@ -248,7 +248,7 @@ export default function App() {
                       style={{
                         width: "200px",
                         height: "auto",
-                        borderRadius: "10px",
+                        borderRadius: "2px",
                       }}
                     />
                   </div>
@@ -257,7 +257,7 @@ export default function App() {
                     2. Find a team of other teenagers at Counterspell
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                <div className="bg-darkpurp rounded-sm my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo3}
@@ -265,7 +265,7 @@ export default function App() {
                       style={{
                         width: "200px",
                         height: "auto",
-                        borderRadius: "10px",
+                        borderRadius: "2px",
                       }}
                     />
                   </div>
@@ -274,7 +274,7 @@ export default function App() {
                     3. Start building your game (no experience needed)
                   </p>
                 </div>
-                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                <div className="bg-darkpurp rounded-sm my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo5}
@@ -282,7 +282,7 @@ export default function App() {
                       style={{
                         width: "200px",
                         height: "auto",
-                        borderRadius: "10px",
+                        borderRadius: "2px",
                       }}
                     />
                   </div>
@@ -292,7 +292,7 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="bg-darkpurp rounded-lg my-4 py-5 mx-3">
+                <div className="bg-darkpurp rounded-sm my-4 py-5 mx-3">
                   <div className="justify-center items-center flex flex-col ">
                     <img
                       src={apo4}
@@ -300,7 +300,7 @@ export default function App() {
                       style={{
                         width: "200px",
                         height: "auto",
-                        borderRadius: "10px",
+                        borderRadius: "2px",
                       }}
                     />
                   </div>
