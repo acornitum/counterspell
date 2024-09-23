@@ -1389,11 +1389,6 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
   integrity sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==
 
-"@jdion/tilt-react@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@jdion/tilt-react/-/tilt-react-1.0.0.tgz#00a12be65a725239ac532f845248b78d356d0dd7"
-  integrity sha512-Qvr0iwxoYc4BAxZzCkrCEF7Vk0DauFIY7eehKU6dCwdil6gj2tlYOOXkMDHMIrdcO6yYDL/yqLI4bNZr4F2swA==
-
 "@jest/console@^27.5.1":
   version "27.5.1"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-27.5.1.tgz#260fe7239602fe5130a94f1aa386eff54b014bba"
@@ -8304,6 +8299,11 @@ react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+react-next-tilt@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/react-next-tilt/-/react-next-tilt-0.4.3.tgz#c76d01529c56f994eb37de4b3e806abeef4ee384"
+  integrity sha512-zvvYa0g1xRGEAE2q7HHbQ68NCShrbhsKkczQ2IsoQulgXxbEIN9GILzGv4KvqvvCN/cZlSv8k9phpsG27RmSoQ==
 
 react-refresh@^0.11.0:
   version "0.11.0"

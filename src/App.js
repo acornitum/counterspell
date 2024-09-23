@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
-import { Tilt } from "@jdion/tilt-react";
+import { Tilt } from 'react-next-tilt';
 import Banner from "@hackclub/banner";
 
 import {
@@ -391,7 +391,7 @@ export default function App() {
 const Cards = () => {
   return (
     <div className="flex flex-wrap justify-center">
-      <Tilt className="m-4">
+      <Tilt className="m-4" scale={1.1}>
         <div>
           <img
             src={hacker}
@@ -403,7 +403,7 @@ const Cards = () => {
           />
         </div>
       </Tilt>
-      <Tilt className="m-4">
+      <Tilt className="m-4 rounded-lg" scale={1.1}>
         <div>
           <img
             src={musician}
@@ -416,9 +416,15 @@ const Cards = () => {
         </div>
       </Tilt>
       <Tilt
-        className="bg-lightpurp rounded-lg p-5 m-4"
+        className="m-4"
+        scale={1.1}
+      >
+        <div
+          className="bg-lightpurp rounded-lg p-5"
         style={{ width: "340px", height: "500px" }}
-      ></Tilt>
+        >
+        </div>
+      </Tilt>
     </div>
   );
 };
