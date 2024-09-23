@@ -109,7 +109,7 @@ export default function App() {
 
       <div className="relative">
         <img
-          src={flare1}
+          src={flare3}
           className="absolute -z-10"
           style={{ width: "300px", height: "auto" }}
         />
@@ -117,7 +117,7 @@ export default function App() {
 
       <div className="relative">
         <img
-          src={flare2}
+          src={flare4}
           className="absolute -z-10"
           style={{ width: "300px", height: "auto", right: 0 }}
         />
@@ -141,7 +141,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="relative">
+        {/*<div className="relative">
           <img
             src={flare3}
             className="absolute -z-10"
@@ -154,9 +154,9 @@ export default function App() {
             className="absolute -z-10"
             style={{ width: "400px", height: "auto", right: 0 }}
           />
-        </div>
+        </div>*/}
 
-        <div className="neuebit m-20">
+        <div className="neuebit m-44">
           <div className="flex justify-center items-center text-center">
             <p className="text-6xl">Happening simultaneously in <span className="text-pink">50 different cities</span>, including:</p> {/* happening simultaneously in 50 diff cities */}
           </div>
@@ -176,7 +176,7 @@ export default function App() {
 
         </div>
 
-        <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
+        <div className="flex flex-col justify-center text-center m-20 my-24 neuebit">
           <p className="text-6xl">
             <span className="text-blue">Artist</span>,{" "}
             <span className="text-green">Musician</span> or{" "}
