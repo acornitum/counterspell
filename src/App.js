@@ -165,7 +165,9 @@ export default function App() {
           />
         </div>
 
-        <div className="neuebit my-44 mx-5">
+        <div className="divide-y-4 divide-dashed divide-pink">
+
+<div className="neuebit my-44 mx-5">
           <div className="flex justify-center items-center text-center">
             <p className="text-6xl mb-4">
               Happening simultaneously in{" "}
@@ -218,6 +220,11 @@ export default function App() {
             </b>
           </div>
         </div>
+
+
+        </div>
+
+        
 
         <div className="flex flex-col justify-center text-center mb-24 neuebit">
           <div className="m-5">

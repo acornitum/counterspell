@@ -103,3 +103,7 @@ a:hover {
 .hue-rot {
   filter: hue-rotate(-65deg) brightness(1.8);
 }
+
+::selection {
+  background: #FF4186;
+}
