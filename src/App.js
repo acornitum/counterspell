@@ -97,9 +97,9 @@ export default function App() {
         className="relative flex flex-col justify-center text-center bg-no-repeat bg-cover bg-top -z-10 overflow-hidden select-none pointer-events-none"
         style={{ backgroundImage: `url(${bg5})` }}
       >
-        {init && (
+        {/*{init && (
           <Particles options={particlesOptions} className="absolute inset-0" />
-        )}
+        )}*/}
 
         {/*<p className="text-3xl inter mb-4 mx-4">
           Hack Club's game jam for high schoolers
@@ -653,12 +653,12 @@ const HeroScroll = () => {
           <img
             src={title}
             alt="Counterspell"
-            className="absolute h-auto top-[12%] w-[70%] scale-[85%] right-[15%]"
+            className="absolute h-auto top-[10%] w-[70%] scale-[70%] right-[15%]"
           />
           <img
             src={smoke}
             alt="Smoke"
-            className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[5%] hue-rot"
+            className="absolute h-auto top-[0%] w-full scale-[110%] translate-x-[9%] hue-rot"
           />
           {/*<img
             src={sparks}
@@ -666,13 +666,12 @@ const HeroScroll = () => {
             className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
           />*/}
           <div className="flex justify-center text-center items-center">
-            <div className="z-50 absolute top-[41%] text-[15px] xs:text-[20px] sm:text-[25px] 2xl:text-[50px] tracking-wide leading-[18px] xs:leading-[25px] sm:leading-[30px] 2xl:leading-[50px]">
-              <p class="text-pink neuebit">
-                FREE BEGINNER FRIENDLY{" "}
-                <span className="text-pink">GAME JAM</span>
+            <div className="z-50 absolute top-[39%] text-[13px] xs:text-[15px] sm:text-[18px] 2xl:text-[32px] tracking-wide leading-[18px] xs:leading-[25px] sm:leading-[30px] 2xl:leading-[50px]">
+              <p class="text-[#CFD8ED] retro">
+                HACK CLUB'S BEGINNER FRIENDLY GAME JAM
               </p>
-              <p class="text-blue neuebit text-[12px] xs:text-[17px] sm:text-[20px] 2xl:text-[40px]">
-                NOVEMBER 9-10 | IN-PERSON, IN A CITY NEAR YOU
+              <p class="text-pink retro text-[13px] xs:text-[15px] sm:text-[18px] 2xl:text-[32px] mt-2">
+                NOVEMBER 9-10, 2024, IN 200+ CITIES
               </p>
               <div className="flex justify-center items-center h-full">
                 <img className="w-12 h-auto mt-24 bobbing" src={down} />
