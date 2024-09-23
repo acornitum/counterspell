@@ -135,7 +135,7 @@ export default function App() {
             className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="https://forms.hackclub.com/t/5Q4tvcSYycus">
+            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="https://forms.hackclub.com/t/5Q4tvcSYycus" target="_blank" rel="noopener noreferrer">
               START
             </a>
           </div>
@@ -171,7 +171,7 @@ export default function App() {
             <p className="m-4">Oshkosh, WI</p>
           </div>
           <div className="flex justify-center items-center text-center text-4xl">
-            <p>Don't see your own city? <a className="text-pink" href="https://forms.hackclub.com/t/5Q4tvcSYycus">Organize it yourself!</a></p>
+            <p>Don't see your own city? <a className="text-pink" href="https://forms.hackclub.com/t/5Q4tvcSYycus" target="_blank" rel="noopener noreferrer">Organize it yourself!</a></p>
           </div>
 
         </div>
@@ -389,20 +389,20 @@ export default function App() {
 
       <div className="mt-4 p-6 bg-darkpurp text-lg">
         <div className="flex justify-center items-center ">
-          <a href="https://hackclub.com" className="mx-4">
+          <a href="https://hackclub.com" target="_blank"rel="noopener noreferrer" className="mx-4">
             Hack Club
           </a>{" "}
           |{" "}
-          <a href="https://hackclub.com/slack/" className="mx-4">
+          <a href="https://hackclub.com/slack/" target="_blank" rel="noopener noreferrer" className="mx-4">
             Slack
           </a>{" "}
           |{" "}
-          <a href="https://www.instagram.com/starthackclub/" className="mx-4">
+          <a href="https://www.instagram.com/starthackclub/" target="_blank" rel="noopener noreferrer" className="mx-4">
             Instagram
           </a>
         </div>
         <div className="text-center">
-          <a href="https://www.instagram.com/aeralixe/?hl=en">
+          <a href="https://www.instagram.com/aeralixe/?hl=en" target="_blank" rel="noopener noreferrer">
             Art by Elena Baskakova (18, Boston)
           </a>
         </div>
