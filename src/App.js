@@ -163,7 +163,7 @@ export default function App() {
           <div className="flex flex-wrap justify-center items-center text-4xl">
             <p className="m-4">Boston, MA</p>
             <p className="m-4">New York City, NY</p>
-            <p className="m-4">Toronto, ON</p>
+            <p className="m-4">Ottawa, ON</p>
             <p className="m-4">Basking Ridge, NJ</p>
             <p className="m-4">Austin, TX</p>
             <p className="m-4">San Francisco, CA</p>
