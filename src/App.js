@@ -135,7 +135,7 @@ export default function App() {
             className="max-w-6xl h-[590px] grow bg-no-repeat bg-cover bg-center clear flex items-center justify-center"
             style={{ backgroundImage: `url(${aboutbkgr})` }}
           >
-            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="#">
+            <a className="text-7xl neuebit underline text-pink -ml-[15px]" href="https://forms.hackclub.com/t/5Q4tvcSYycus">
               START
             </a>
           </div>
@@ -154,6 +154,26 @@ export default function App() {
             className="absolute -z-10"
             style={{ width: "400px", height: "auto", right: 0 }}
           />
+        </div>
+
+        <div className="neuebit m-20">
+          <div className="flex justify-center items-center text-center">
+            <p className="text-6xl">Happening simultaneously in <span className="text-pink">50 different cities</span>, including:</p> {/* happening simultaneously in 50 diff cities */}
+          </div>
+          <div className="flex flex-wrap justify-center items-center text-4xl">
+            <p className="m-4">Boston, MA</p>
+            <p className="m-4">New York City, NY</p>
+            <p className="m-4">Toronto, ON</p>
+            <p className="m-4">Basking Ridge, NJ</p>
+            <p className="m-4">Austin, TX</p>
+            <p className="m-4">San Francisco, CA</p>
+            <p className="m-4">Burlington, VT</p>
+            <p className="m-4">Oshkosh, WI</p>
+          </div>
+          <div className="flex justify-center items-center text-center text-4xl">
+            <p>Don't see your own city? <a className="text-pink" href="https://forms.hackclub.com/t/5Q4tvcSYycus">Organize it yourself!</a></p>
+          </div>
+
         </div>
 
         <div className="flex flex-col justify-center text-center m-5 my-24 neuebit">
@@ -362,6 +382,7 @@ export default function App() {
             <div class="flex justify-center">
               <Faq />
             </div>
+            <p className="text-2xl">Drag around the FAQ boxes to solve a puzzle!</p>
           </div>
         </div>
       </div>
@@ -454,7 +475,7 @@ const FaqCard = (props) => {
       {...listeners}
     >
       <div className="p-5 h-full">
-        <div className="h-full bg-black/20 p-3 flex flex-col justify-center">
+        <div className="h-full bg-black/40 p-3 flex flex-col justify-center">
           <p className="mb-2 text-xl">{faqItem.question}</p>
           <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
         </div>
