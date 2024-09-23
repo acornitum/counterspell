@@ -56,6 +56,9 @@ import flare7 from "./art/flares/flare7.png";
 import flare8 from "./art/flares/flare8.png";
 import flare9 from "./art/flares/flare9.png";
 import flare10 from "./art/flares/flare10.png";
+import torch1 from "./art/flares/torch1.png";
+import torch2 from "./art/flares/torch2.png";
+
 
 import faq1 from "./art/faqbkgr/faq1.png";
 import faq2 from "./art/faqbkgr/faq2.png";
@@ -148,16 +151,16 @@ export default function App() {
 
         <div className="relative">
           <img
-            src={flare9}
+            src={torch1}
             className="absolute -z-10"
-            style={{ width: "400px", height: "auto" }}
+            style={{ width: "200px", height: "auto" }}
           />
         </div>
         <div className="relative">
           <img
-            src={flare10}
+            src={torch2}
             className="absolute -z-10"
-            style={{ width: "400px", height: "auto", right: 0 }}
+            style={{ width: "200px", height: "auto", right: 0 }}
           />
         </div>
 
