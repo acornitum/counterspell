@@ -8,7 +8,7 @@ export default function About() {
         <h2 className="text-center retro uppercase text-6xl text-whitepurp">
           Make games, <span className="text-pink">win prizes</span>
         </h2>
-        <div className="grid grid-cols-2 grid-rows-2 gap-12 leading-[3rem] tracking-wider">
+        <div className="grid grid-cols-1 xl:grid-cols-2 grid-rows-2 gap-12 leading-[3rem] tracking-wider mx-12 2xl:mx-0">
           <div className="row-span-2 border-4 border-pink border-dashed p-12 space-y-12">
             <p>
               Counterspell is a beginner friendly game jam for high schoolers
@@ -28,11 +28,11 @@ export default function About() {
             </p>
           </div>
           <div
-            className="border-4 border-pink border-dashed bg-cover bg-center bg-clip-padding"
+            className="border-4 border-pink border-dashed bg-cover bg-center bg-clip-padding h-64 xl:h-auto"
             style={{ backgroundImage: `url(${about1})` }}
           ></div>
           <div
-            className="border-4 border-pink border-dashed bg-cover bg-center bg-clip-padding"
+            className="hidden xl:block border-4 border-pink border-dashed bg-cover bg-center bg-clip-padding"
             style={{ backgroundImage: `url(${about2})` }}
           ></div>
         </div>
