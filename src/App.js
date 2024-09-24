@@ -108,12 +108,12 @@ export default function App() {
 
         <Locations />
 
-        <Organize />
+        {/* <Organize /> */}
 
 
         <div class="border-t-4 border-pink border-dashed"></div>
 
-        <div className="relative">
+        {/* <div className="relative">
           <img
             src={flare9}
             alt=""
@@ -126,11 +126,11 @@ export default function App() {
             alt=""
             className="absolute -z-10 -mt-24 sm:-mt-32 lg:mt-0 w-[200px] sm:w-[300px] xl:w-[400px] h-auto -right-12 sm:right-0"
           />
-        </div>
+        </div> */}
 
         <div
           class="faq"
-          className="flex flex-col justify-center text-center neuebit"
+          className="flex flex-col justify-center text-center neuebit py-12"
         >
           <div className="m-5">
             <p className="mb-6 text-6xl">Frequently Asked Questions</p>
