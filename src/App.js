@@ -98,7 +98,7 @@ export default function App() {
       <Hero />
 
       <div className="relative mt-8 lg:-mt-32 2xl:-mt-64 3xl:-mt-96">
-        <div class="absolute -bottom-4 left-0 right-0 top-0 -z-10 bg-dark border-t-8 border-lightpurp"></div>
+        <div class="absolute -bottom-4 left-0 right-0 top-0 -z-10 bg-dark"></div>
 
         <About />
 
@@ -106,9 +106,10 @@ export default function App() {
 
         <Steps />
 
+        <Locations />
+
         <Organize />
 
-        <Locations />
 
         <div class="border-t-4 border-pink border-dashed"></div>
 
