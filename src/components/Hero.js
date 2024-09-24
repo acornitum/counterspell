@@ -31,8 +31,6 @@ export default function Hero() {
         )}*/}
 
         <HeroScroll />
-
-        <img src={breakline} alt="" className="w-full -mt-[35%] z-10 -mb-2" />
       </div>
       </>
   );

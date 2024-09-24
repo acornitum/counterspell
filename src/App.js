@@ -73,6 +73,7 @@ import Organize from "./components/Organize";
 import Locations from "./components/Locations";
 import Cards from "./components/Cards";
 import Steps from "./components/Steps";
+import About from "./components/About";
 
 const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
 
@@ -95,7 +96,11 @@ export default function App() {
     <div>
       <Hero />
 
-      <div className="mt-8 lg:-mt-32 2xl:-mt-64 3xl:-mt-96">
+      <div className="relative mt-8 lg:-mt-32 2xl:-mt-64 3xl:-mt-96">
+        <div class="absolute -bottom-4 left-0 right-0 top-0 -z-10 bg-dark border-t-8 border-lightpurp"></div>
+
+        <About />
+
         <Organize />
 
         <Locations />
@@ -263,8 +268,6 @@ export default function App() {
           </a>
         </div>
       </div>
-
-      <div className="grainy-bg"></div>
 
       <svg width="0" height="0" className="block">
         <filter id="grainy" x="0" y="0" width="100%" height="100%">

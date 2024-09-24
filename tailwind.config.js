@@ -8,9 +8,10 @@ module.exports = {
         mag: '#D046D6',
         pink: '#FF4186',
         blue: '#5BE2FA',
-        lightpurp: '#6370F5',
+        lightpurp: '#90A8E1',
         darkpurp: '#443D87',
-        dark: '#202F53'
+        dark: '#202F53',
+        whitepurp: '#CFD8ED'
       },
       screens: {
         'xs': '480px',
@@ -18,7 +19,7 @@ module.exports = {
       },
       maxWidth: {
         '8xl': '90rem',
-        
+
       }
     },
   },

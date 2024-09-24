@@ -144,15 +144,14 @@ a:hover {
   filter: url(#grainy);
 }
 
+.grainy-bg {
+  background: radial-gradient(ellipse, mediumturquoise, darkslateblue);
+  filter: url(#grainy);
+}
+
 #background::after {
   content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, .6);
-}
-
-#root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
