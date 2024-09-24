@@ -37,7 +37,7 @@ export default function Locations() {
             Counterspell is organized by teenagers, for teenagers.
           </p>
           <p>
-            Don't see your city on the map? Sign up to <a href="https://hack.club/counterspell-signup" target="_blank" rel="noreferrer" className="text-pink">organize here</a>.
+            Don't see your city on the list? Sign up to <a href="https://hack.club/counterspell-signup" target="_blank" rel="noreferrer" className="text-pink">organize here</a>.
           </p>
         </div>
       </div>
