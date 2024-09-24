@@ -7,7 +7,7 @@ import artist from "../art/cards/artist.png";
 export default function Cards() {
   return (
     <div className="flex flex-col justify-center items-center text-center py-24 retro bg-darker">
-      <div className="text-4xl uppercase leading-[4rem] mx-20">
+      <div className="text-3xl uppercase leading-[4rem] mx-6">
         <p>Artist, Musician or Coder?</p>
         <p>
           Join one of three <span className="text-pink">tribes</span> when you
@@ -45,9 +45,9 @@ export default function Cards() {
         </Tilt>
       </div>
 
-      <div className="flex justify-center leading-[3rem] tracking-wider mx-12">
+      <div className="flex justify-center leading-[3rem] tracking-wider mx-6">
         <div className="mt-6 border-4 border-dashed border-pink max-w-6xl py-6 px-6">
-          <p class="neuebit text-4xl">
+          <p class="neuebit text-3xl">
             You can join the tribe you identify with for exclusive swag and
             badges! You also get to compete against other tribes in friendly
             activities/challenges throughout Counterspell!

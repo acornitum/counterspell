@@ -153,12 +153,12 @@ export default function App() {
           class="faq"
           className="flex flex-col justify-center text-center retro py-12"
         >
-          <div className="m-5">
-            <p className="mb-6 text-4xl uppercase">Frequently Asked Questions</p>
+          <div className="m-6">
+            <p className="mb-6 text-3xl uppercase">Frequently Asked Questions</p>
             <div class="flex justify-center">
               <Faq />
             </div>
-            <p className="text-2xl">
+            <p className="text-xl">
               Drag around the FAQ boxes to solve a puzzle!
             </p>
           </div>

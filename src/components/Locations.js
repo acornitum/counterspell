@@ -19,19 +19,19 @@ export default function Locations() {
   const [submitBtn, setSubmitBtn] = useState("Sign up");
 
   return (
-    <div className="neuebit py-24 px-12 bg-darker text-center retro relative">
-      <p className="text-4xl uppercase">
+    <div className="neuebit py-24 px-6 bg-darker text-center retro relative">
+      <p className="text-3xl uppercase">
         It's happening all around you
       </p>
       <div class="flex justify-center pt-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center text-3xl max-w-6xl w-full gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center text-2xl max-w-5xl w-full gap-8">
           {cities.map((city) => (
             <p className="lg:odd:text-left lg:even:text-right">{city}</p>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-center text-center text-3xl space-y-2 my-20">
+      <div className="flex justify-center text-center text-2xl space-y-2 my-20">
         <div className="border-4 border-dashed border-pink py-6 px-6 neuebit tracking-wider text-4xl">
           <p>
             Counterspell is organized by teenagers, for teenagers.
@@ -43,7 +43,7 @@ export default function Locations() {
       </div>
 
       <div className="flex items-center flex-col space-y-3 uppercase">
-        <p className="text-center text-2xl">Get notified when registrations open</p>
+        <p className="text-center text-xl">Get notified when registrations open</p>
         <form
           method="post"
           action="https://app.loops.so/api/newsletter-form/clo3frr4v02f3jv0qqu6hgfqs"
