@@ -10,7 +10,7 @@ export default function Steps() {
       <div className="m-5">
         <p className="text-6xl">Here's how Counterspell works:</p>
         <div className="flex justify-center mx-4 my-6">
-          <div className="border-4 rounded-md border-pink flex flex-wrap items-center justify-center inter py-8 grow">
+          <div className="border-4 rounded-md border-pink flex flex-wrap items-center justify-center inter p-8 gap-6">
             <StepCard
               img={apo1}
               text="1. Sign up for a Counterspell Event in your city"
@@ -40,21 +40,16 @@ export default function Steps() {
 
 function StepCard(props) {
   return (
-    <div className="bg-pink rounded-sm">
-      <div className="justify-center items-center flex flex-col ">
+    <div className="bg-pink rounded-sm p-4">
+      <div className="justify-center items-center flex flex-col w-[200px]">
         <img
           src={props.img}
           alt="Steps"
-          className="justify-center items-center flex flex-col"
-          style={{
-            width: "200px",
-            height: "auto",
-            borderRadius: "2px",
-          }}
+          className="justify-center items-center flex flex-col rounded-[2px] overflow-hidden"
         />
       </div>
 
-      <p className="my-2 mx-5 max-w-44">{props.text}</p>
+      <p className="h-24 px-2 flex items-center w-[200px]">{props.text}</p>
     </div>
   );
 }
