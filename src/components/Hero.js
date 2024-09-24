@@ -96,7 +96,7 @@ function HeroScroll() {
               className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
             />*/}
           <div className="flex justify-center text-center items-center">
-            <div className="z-50 absolute top-[43%] lg:top-[47%] text-[60%] sm:text-[100%] lg:text-[140%] tracking-wide">
+            <div className="z-50 absolute top-[43%] lg:top-[47%] text-[60%] sm:text-[80%] md:text-[100%] lg:text-[140%] tracking-wide">
               <p class="text-[#CFD8ED] retro">
                 HACK CLUB'S BEGINNER FRIENDLY GAME JAM
               </p>
