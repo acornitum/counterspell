@@ -219,7 +219,7 @@ export default function App() {
 
       </div> */}
 
-      <div className="mt-4 p-6 bg-darkpurp text-2xl neuebit">
+      <div className="mt-4 p-6 bg-[#90A8E1] text-2xl neuebit">
         <div className="flex justify-center items-center ">
           <a
             href="https://hackclub.com"
