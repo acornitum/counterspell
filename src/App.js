@@ -222,7 +222,7 @@ export default function App() {
 
       <div className="mt-4 p-6 bg-pink text-2xl neuebit">
         <div className="text-center">
-          <p>Build with love by teenagers, for teenagers at Hack Club</p>
+          <p>Built with love by teenagers, for teenagers at Hack Club</p>
         </div>
         <div className="flex justify-center items-center ">
           <a
