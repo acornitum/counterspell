@@ -19,7 +19,7 @@ export default function Schedule() {
   return (
     <>
       <div className="flex flex-col items-center neuebit">
-        <div className="flex flex-col text-4xl lg:text-5xl w-full max-w-3xl lg:max-w-4xl space-y-2 lg:space-y-3 px-12 pb-12">
+        <div className="flex flex-col text-xl sm:text-4xl lg:text-5xl w-full max-w-3xl lg:max-w-4xl space-y-2 lg:space-y-3 px-12 pb-12">
             {schedule.map((item) => (
             <div className="flex">
                 <p>{item.event}</p>

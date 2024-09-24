@@ -19,7 +19,7 @@ export default function Locations() {
   const [submitBtn, setSubmitBtn] = useState("Sign up");
 
   return (
-    <div className="neuebit py-24 px-12 bg-darker text-center retro relative -z-10">
+    <div className="neuebit py-24 px-12 bg-darker text-center retro relative">
       <p className="text-4xl uppercase">
         It's happening all around you
       </p>
@@ -37,30 +37,30 @@ export default function Locations() {
             Counterspell is organized by teenagers, for teenagers.
           </p>
           <p>
-            Don't see your city on the map? Sign up to organize here
+            Don't see your city on the map? Sign up to <a href="https://hack.club/counterspell-signup" target="_blank" rel="noreferrer" className="text-pink">organize here</a>.
           </p>
         </div>
       </div>
 
       <div className="flex items-center flex-col space-y-3 uppercase">
-        <p className="text-center text-2xl">Get notified when sign ups open</p>
+        <p className="text-center text-2xl">Get notified when registrations open</p>
         <form
           method="post"
           action="https://app.loops.so/api/newsletter-form/clo3frr4v02f3jv0qqu6hgfqs"
-          className="retro text-3xl flex flex-col lg:flex-row space-y-4 lg:space-y-0"
+          className="retro text-2xl sm:text-3xl flex flex-col lg:flex-row space-y-4 lg:space-y-0"
           onSubmit={handleSubmit}
         >
-            <input type="email" name="email" className="outline-none border-4 lg:border-r-0 border-pink bg-transparent border-dashed px-4 h-20 lg:w-[500px]" placeholder="fiona@hackclub.com" required />
+            <input type="email" name="email" className="outline-none border-4 lg:border-r-0 border-pink bg-transparent border-dashed px-4 h-16 sm:h-20 lg:w-[500px] w-full" placeholder="fiona@hackclub.com" required />
             <input type="hidden" name="userGroup" value="Hack Clubber" />
             <input type="hidden" name="mailingLists" value="cm1fqxdc900qn0ll9fd5m3wdv" />
-            <button type="submit" className="uppercase bg-pink h-20 px-4 border-4 border-pink" id="formSubmit">{submitBtn}</button>
+            <button type="submit" className="uppercase bg-pink h-16 sm:h-20 px-4 border-4 border-pink" id="formSubmit">{submitBtn}</button>
         </form>
       </div>
 
       <img
       src={flare1}
       alt=""
-      className="w-48 absolute top-0 right-0"
+      className="w-48 absolute top-0 right-0 -z-10"
       >
       </img>
       <div class="absolute left-0 top-0 bottom-0">
@@ -76,7 +76,7 @@ export default function Locations() {
       <img
       src={flare3}
       alt=""
-      className="w-48 absolute bottom-8 right-0"
+      className="w-48 absolute bottom-8 right-0 -z-10"
       >
       </img>
     </div>

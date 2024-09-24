@@ -45,7 +45,7 @@ export default function Cards() {
         </Tilt>
       </div>
 
-      <div className="flex justify-center leading-[3rem] tracking-wider">
+      <div className="flex justify-center leading-[3rem] tracking-wider mx-12">
         <div className="mt-6 border-4 border-dashed border-pink max-w-6xl py-6 px-6">
           <p class="neuebit text-4xl">
             You can join the tribe you identify with for exclusive swag and

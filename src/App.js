@@ -74,7 +74,6 @@ import Locations from "./components/Locations";
 import Cards from "./components/Cards";
 import Steps from "./components/Steps";
 import About from "./components/About";
-import Schedule from "./components/Schedule";
 
 const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
 
@@ -255,7 +254,7 @@ const FaqCard = (props) => {
 
   return (
     <div
-      className="bg-darkpurp max-w-lg lg:w-[445px] lg:h-[280px] bg-cover bg-center"
+      className="bg-pink max-w-lg lg:w-[445px] lg:h-[280px] bg-cover bg-center"
       ref={setNodeRef}
       style={style}
       {...attributes}

@@ -32,7 +32,7 @@ export default function Hero() {
           )}*/}
           <HeroScroll />
         </div>
-        <div className="absolute h-auto bottom-8 left-0 right-0 z-[50]">
+        <div className="absolute h-auto bottom-8 left-0 right-0 z-[50]" >
           <div class="flex justify-center w-full">
             <img src={down} alt="" className="w-12 h-auto bobbing" />
           </div>
@@ -75,20 +75,20 @@ function HeroScroll() {
           <img
             src={billboard}
             alt="Billboard"
-            className="w-full h-auto mt-[5%] lg:mt-[26%] lg:scale-[150%]"
+            className="w-full h-auto mt-[5%] lg:mt-[19%] lg:scale-[130%]"
           />
           <img
             src={title}
             alt="Counterspell"
-            className="absolute h-auto top-[12%] lg:top-[19%] w-[70%] lg:scale-[150%] right-[15%]"
+            className="absolute h-auto top-[12%] lg:top-[17%] w-[70%] lg:scale-[130%] right-[15%]"
           />
           <img
             src={smoke}
             alt="Smoke"
-            className="absolute h-auto top-0 lg:top-[9%] w-full lg:scale-[150%] translate-x-[1%] hue-rot"
+            className="absolute h-auto top-0 lg:top-[5%] w-full lg:scale-[130%] translate-x-[1%] hue-rot"
           />
 
-          <div className="hidden absolute top-[90%] lg:top-[145%] left-[9%] w-[80%] lg:scale-[150%] bg-[#090808] h-screen" />
+          <div className="hidden absolute top-[90%] lg:top-[145%] left-[9%] w-[80%] lg:scale-[130%] bg-[#090808] h-screen" />
 
           {/*<img
               src={sparks}
@@ -96,11 +96,11 @@ function HeroScroll() {
               className="absolute z-10 h-auto top-[5%] w-full scale-[110%]"
             />*/}
           <div className="flex justify-center text-center items-center">
-            <div className="z-50 absolute top-[43%] lg:top-[51.5%] text-[100%] lg:text-[150%] tracking-wide leading-[14px] xs:leading-[23px] sm:leading-[24px] 2xl:leading-[46px]">
+            <div className="z-50 absolute top-[43%] lg:top-[47%] text-[60%] sm:text-[100%] lg:text-[140%] tracking-wide">
               <p class="text-[#CFD8ED] retro">
                 HACK CLUB'S BEGINNER FRIENDLY GAME JAM
               </p>
-              <p class="text-pink retro text-[90%] lg:text-[90%] mt-2">
+              <p class="text-pink retro text-[80%] sm:text-[90%] lg:text-[90%] mt-2">
                 NOVEMBER 9-10, 2024, IN 200+ CITIES
               </p>
             </div>
