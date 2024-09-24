@@ -6,17 +6,17 @@ import artist from "../art/cards/artist.png";
 
 export default function Cards() {
   return (
-    <div className="flex flex-col justify-center text-center px-20 py-24 neuebit">
-      <p className="text-6xl">
-        <span className="text-blue">Artist</span>,
-        <span className="text-green"> Musician </span> or
-        <span className="text-pink"> Coder</span>?
-      </p>
-      <p className="text-6xl">Join one of the three guilds when you sign up!</p>
-      <p className="text-3xl mb-8"></p>
+    <div className="flex flex-col justify-center items-center text-center px-20 py-24 retro bg-darker">
+      <div className="text-4xl uppercase leading-[4rem]">
+        <p>Artist, Musician or Coder?</p>
+        <p>
+          Join one of three <span className="text-pink">tribes</span> when you
+          sign up!
+        </p>
+      </div>
 
-      <div className="flex flex-wrap justify-center">
-        <Tilt className="m-4" scale={1.1}>
+      <div className="flex flex-wrap justify-center xl:justify-between max-w-6xl gap-8 py-10 w-full">
+        <Tilt className="rounded-lg" scale={1.1}>
           <div>
             <img
               src={artist}
@@ -25,7 +25,7 @@ export default function Cards() {
             />
           </div>
         </Tilt>
-        <Tilt className="m-4 rounded-lg" scale={1.1}>
+        <Tilt className="rounded-lg" scale={1.1}>
           <div>
             <img
               src={musician}
@@ -34,7 +34,7 @@ export default function Cards() {
             />
           </div>
         </Tilt>
-        <Tilt className="m-4 rounded-lg" scale={1.1}>
+        <Tilt className="rounded-lg" scale={1.1}>
           <div>
             <img
               src={hacker}
@@ -45,12 +45,14 @@ export default function Cards() {
         </Tilt>
       </div>
 
-      <div className="mt-6">
-        <b class="neuebit text-4xl">
-          Spend a weekend making video games with your friends at our
-          <span class="text-pink"> beginner-friendly game jam</span>, where you
-          make games and win prizes!
-        </b>
+      <div className="flex justify-center">
+        <div className="mt-6 border-4 border-dashed border-pink max-w-6xl py-6 px-4">
+          <p class="neuebit text-4xl">
+            You can join the tribe you identify with for exclusive swag and
+            badges! You also get to compete against other tribes in friendly
+            activities/challenges throughout Counterspell!
+          </p>
+        </div>
       </div>
     </div>
   );

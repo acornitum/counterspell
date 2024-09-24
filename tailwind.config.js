@@ -11,6 +11,7 @@ module.exports = {
         lightpurp: '#90A8E1',
         darkpurp: '#443D87',
         dark: '#202F53',
+        darker: '#0A081E',
         whitepurp: '#CFD8ED'
       },
       screens: {

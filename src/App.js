@@ -101,13 +101,14 @@ export default function App() {
 
         <About />
 
+        <Cards />
+
         <Organize />
 
         <Locations />
 
         <div class="border-t-4 border-pink border-dashed"></div>
 
-        <Cards />
 
         <Steps />
 
