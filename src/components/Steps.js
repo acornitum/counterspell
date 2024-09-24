@@ -10,7 +10,7 @@ export default function Steps() {
     <div className="py-12 space-y-6">
       <div className="flex flex-col justify-center text-center">
         <div className="">
-          <p className="text-4xl uppercase py-10 retro">
+          <p className="text-4xl uppercase py-10 retro mx-4">
             How does a <span className="text-pink">game jam</span> work?
           </p>
           <div className="flex justify-center mx-4 my-6">
@@ -37,7 +37,7 @@ export default function Steps() {
               />
             </div>
           </div>
-          <div className="py-10 text-2xl uppercase retro space-y-4">
+          <div className="py-10 text-2xl uppercase retro space-y-4 mx-4">
             <p className="">
               Most Counterspell events will go on for{" "}
               <span className="text-pink">24 hours</span> (unless explicitly

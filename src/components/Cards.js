@@ -6,8 +6,8 @@ import artist from "../art/cards/artist.png";
 
 export default function Cards() {
   return (
-    <div className="flex flex-col justify-center items-center text-center px-20 py-24 retro bg-darker">
-      <div className="text-4xl uppercase leading-[4rem]">
+    <div className="flex flex-col justify-center items-center text-center py-24 retro bg-darker">
+      <div className="text-4xl uppercase leading-[4rem] mx-20">
         <p>Artist, Musician or Coder?</p>
         <p>
           Join one of three <span className="text-pink">tribes</span> when you
