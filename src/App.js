@@ -201,9 +201,9 @@ export default function App() {
             <div class="flex justify-center">
               <Faq />
             </div>
-            <p className="text-xl">
+            {/*<p className="text-xl">
               Drag around the FAQ boxes to solve a puzzle!
-            </p>
+            </p>*/}
           </div>
         </div>
       </div>
