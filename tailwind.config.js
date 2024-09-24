@@ -16,6 +16,10 @@ module.exports = {
         'xs': '480px',
         '3xl': '2000px',
       },
+      maxWidth: {
+        '8xl': '90rem',
+        
+      }
     },
   },
   plugins: [],

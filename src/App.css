@@ -127,3 +127,32 @@ a:hover {
 ::selection {
   background: #FF4186;
 }
+
+#background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse, mediumturquoise, darkslateblue);
+  filter: url(#grainy);
+}
+
+#background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
