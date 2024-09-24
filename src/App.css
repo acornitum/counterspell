@@ -145,7 +145,8 @@ a:hover {
 }
 
 .grainy-bg {
-  background: radial-gradient(ellipse, mediumturquoise, darkslateblue);
+  background: radial-gradient(ellipse, black, transparent);
+  opacity: 0.2;
   filter: url(#grainy);
 }
 

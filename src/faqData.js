@@ -13,8 +13,8 @@ const faqData = [
         question: "What has Hack Club done before?",
         answer: `We have run multiple events around the world. The summer of '21, we 
         <a href="https://www.youtube.com/watch?v=2BID8_pGuqA&ab_channel=HackClub">chartered a train across America</a>
-        and ran the world's longest hackathon on land. Last year, we ran an outdoors do-it-yourself camping 
-        adventure in Cabot, Vermont. Check it out <a href="https://www.youtube.com/watch?v=O1s5HqSqKi0&ab_channel=HackClub">here</a>!`,
+        and ran the world's longest hackathon on land. Last year, we ran an outdoors do-it-yourself <a href="https://www.youtube.com/watch?v=O1s5HqSqKi0&ab_channel=HackClub">camping 
+        adventure</a> in Cabot, Vermont.`,
     },
     {
         question: "I'm not good at coding, can I join?",

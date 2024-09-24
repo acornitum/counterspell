@@ -80,11 +80,17 @@ const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
 
 export default function App() {
   const [init, setInit] = useState(false);
+  const [docHeight, setDocHeight] = useState(0);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [screenHeight, setScreenHeight] = useState(0);
 
   useEffect(() => {
     if (init) {
       return;
     }
+
+    setDocHeight(document.documentElement.scrollHeight);
+    setScreenHeight(window.innerHeight);
 
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
@@ -93,11 +99,28 @@ export default function App() {
     });
   }, []);
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    setScrollPos(window.scrollY);
+  };
+
+  // useEffect(() => {
+  //   console.log(docHeight - scrollPos);
+  // }, [scrollPos]);
+
   return (
     <div>
+      <div className="fixed bottom-0 left-0 right-0 h-44 pointer-events-none bg-gradient-to-t from-darker from-20% to-transparent z-10 motion-safe:transition-all"
+      style={{opacity: docHeight - scrollPos < 1000 ? "0" : "100"}}></div>
+
       <Hero />
 
-      <div className="relative mt-8 lg:-mt-32 2xl:-mt-64 3xl:-mt-96">
+      <div className="relative">
+      <div class="absolute -bottom-4 left-0 right-0 top-0 grainy-bg pointer-events-none"></div>
         <div class="absolute -bottom-4 left-0 right-0 top-0 -z-10 bg-dark"></div>
 
         <About />
@@ -110,8 +133,7 @@ export default function App() {
 
         {/* <Organize /> */}
 
-
-        <div class="border-t-4 border-pink border-dashed"></div>
+        {/* <div class="border-t-4 border-pink border-dashed"></div> */}
 
         {/* <div className="relative">
           <img
@@ -130,10 +152,10 @@ export default function App() {
 
         <div
           class="faq"
-          className="flex flex-col justify-center text-center neuebit py-12"
+          className="flex flex-col justify-center text-center retro py-12"
         >
           <div className="m-5">
-            <p className="mb-6 text-6xl">Frequently Asked Questions</p>
+            <p className="mb-6 text-4xl uppercase">Frequently Asked Questions</p>
             <div class="flex justify-center">
               <Faq />
             </div>
@@ -241,8 +263,8 @@ const FaqCard = (props) => {
     >
       <div className="p-5 h-full">
         <div className="h-full bg-black/40 p-3 flex flex-col justify-center">
-          <p className="mb-2 text-xl">{faqItem.question}</p>
-          <p dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
+          <p className="mb-2 text-lg uppercase retro">{faqItem.question}</p>
+          <p className="neuebit text-xl text-justify leading-6" dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
         </div>
       </div>
     </div>
