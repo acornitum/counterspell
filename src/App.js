@@ -177,7 +177,10 @@ export default function App() {
 
       </div> */}
 
-      <div className="mt-4 p-6 bg-[#90A8E1] text-2xl neuebit">
+      <div className="mt-4 p-6 bg-pink text-2xl neuebit">
+        <div className="text-center">
+          <p>Build with love by teenagers, for teenagers at Hack Club</p>
+        </div>
         <div className="flex justify-center items-center ">
           <a
             href="https://hackclub.com"
@@ -197,6 +200,16 @@ export default function App() {
             Slack
           </a>{" "}
           |{" "}
+          
+          <a
+            href="https://www.youtube.com/@HackClubHQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-4"
+          >
+            YouTube
+          </a>{" "}
+          |{" "}
           <a
             href="https://www.instagram.com/starthackclub/"
             target="_blank"
@@ -214,15 +227,6 @@ export default function App() {
             className="mx-2"
           >
             Art by Elena Baskakova (18, Boston)
-          </a>{" "}
-          |{" "}
-          <a
-            href="https://github.com/acornitum/counterspell"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2"
-          >
-            Site built by Hack Clubbers
           </a>
         </div>
       </div>
