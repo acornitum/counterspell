@@ -148,6 +148,15 @@ export default function App() {
         <source src="/haunted.mp3" type="audio/mp3" />
       </audio>
 
+      <a
+        className="hidden sm:block text-white fixed top-4 right-4 retro bg-pink py-2 px-3 uppercase z-50 hover:scale-105 hover:text-white"
+        href="https://hack.club/counterspell-signup"
+        target="_blank"
+        style={{ textDecorationLine: "none" }}
+      >
+        Sign up to organize
+      </a>
+
       <Hero />
 
       <div className="relative">
