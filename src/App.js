@@ -1,11 +1,9 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { confetti } from "@tsparticles/confetti";
-import particlesOptions from "./particles.json";
-import { Tilt } from "react-next-tilt";
-import Banner from "@hackclub/banner";
+import useSound from "use-sound";
 
 import {
   DndContext,
@@ -24,42 +22,6 @@ import { CSS as dndCSS } from "@dnd-kit/utilities";
 
 import faqData from "./faqData";
 
-import billboard from "./art/billboard.png";
-import title from "./art/title.png";
-import bg1 from "./art/hero/bg1.png";
-import bg2 from "./art/hero/bg2.png";
-import bg3 from "./art/hero/bg3.png";
-import bg4 from "./art/hero/bg4.png";
-import bg5 from "./art/hero/bg5.png";
-import breakline from "./art/breakline.png";
-import sparks from "./art/sparks.gif";
-import aboutbkgr from "./art/aboutbkgr.png";
-import smoke from "./art/smoke.gif";
-import down from "./art/down.png";
-
-import apo1 from "./art/images/apo1.png";
-import apo2 from "./art/images/apo2.png";
-import apo3 from "./art/images/apo3.png";
-import apo4 from "./art/images/apo4.png";
-import apo5 from "./art/images/apo5.png";
-
-import hacker from "./art/cards/hacker.png";
-import musician from "./art/cards/musician.png";
-import artist from "./art/cards/artist.png";
-
-import flare1 from "./art/flares/flare1.png";
-import flare2 from "./art/flares/flare2.png";
-import flare3 from "./art/flares/flare3.png";
-import flare4 from "./art/flares/flare4.png";
-import flare5 from "./art/flares/flare5.png";
-import flare6 from "./art/flares/flare6.png";
-import flare7 from "./art/flares/flare7.png";
-import flare8 from "./art/flares/flare8.png";
-import flare9 from "./art/flares/flare9.png";
-import flare10 from "./art/flares/flare10.png";
-import torch1 from "./art/flares/torch1.png";
-import torch2 from "./art/flares/torch2.png";
-
 import faq1 from "./art/faqbkgr/faq1.png";
 import faq2 from "./art/faqbkgr/faq2.png";
 import faq3 from "./art/faqbkgr/faq3.png";
@@ -68,12 +30,14 @@ import faq5 from "./art/faqbkgr/faq5.png";
 import faq6 from "./art/faqbkgr/faq6.png";
 import faq7 from "./art/faqbkgr/faq7.png";
 import faq8 from "./art/faqbkgr/faq8.png";
+
 import Hero from "./components/Hero";
-import Organize from "./components/Organize";
 import Locations from "./components/Locations";
 import Cards from "./components/Cards";
 import Steps from "./components/Steps";
 import About from "./components/About";
+
+import music from "./music.mp3";
 
 const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
 
@@ -82,6 +46,10 @@ export default function App() {
   const [docHeight, setDocHeight] = useState(0);
   const [scrollPos, setScrollPos] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
+  const [hasPlayed, setHasPlayed] = useState(false);
+
+  const [play, { stop }] = useSound(music, { volume: isMuted ? 0 : 1 });
 
   useEffect(() => {
     if (init) {
@@ -104,8 +72,24 @@ export default function App() {
   }, []);
 
   const handleScroll = () => {
+    // if (!hasPlayed) {
+    //   play();
+    //   setIsMuted(false);
+    //   setHasPlayed(true);
+    // }
     setScrollPos(window.scrollY);
   };
+
+  const audioRef = useRef(null);
+
+  function toggleMute() {
+    if (isMuted) {
+      play();
+    } else {
+      stop();
+    }
+    setIsMuted(!isMuted);
+  }
 
   // useEffect(() => {
   //   console.log(docHeight - scrollPos);
@@ -113,13 +97,61 @@ export default function App() {
 
   return (
     <div>
-      <div className="fixed bottom-0 left-0 right-0 h-44 pointer-events-none bg-gradient-to-t from-darker from-20% to-transparent z-10 motion-safe:transition-all"
-      style={{opacity: docHeight - scrollPos < 1000 ? "0" : "100"}}></div>
+      <div
+        className="fixed bottom-0 left-0 right-0 h-44 pointer-events-none bg-gradient-to-t from-darker from-20% to-transparent z-10 motion-safe:transition-all"
+        style={{ opacity: docHeight - scrollPos < 1000 ? "0" : "100" }}
+      ></div>
+      <div
+        style={{
+          zIndex: 999,
+        }}
+        className="fixed bottom-3 right-3"
+      >
+        <div
+          className="bg-darker border-pink size-12 rounded-full border-2 flex items-center justify-center"
+          onClick={toggleMute}
+        >
+          {!isMuted ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z"
+              />
+            </svg>
+          )}
+        </div>
+      </div>
+      <audio ref={audioRef} loop autoPlay>
+        <source src="/haunted.mp3" type="audio/mp3" />
+      </audio>
 
       <Hero />
 
       <div className="relative">
-      <div class="absolute -bottom-4 left-0 right-0 top-0 grainy-bg pointer-events-none"></div>
+        <div class="absolute -bottom-4 left-0 right-0 top-0 grainy-bg pointer-events-none"></div>
         <div class="absolute -bottom-4 left-0 right-0 top-0 -z-10 bg-dark"></div>
 
         <About />
@@ -154,7 +186,9 @@ export default function App() {
           className="flex flex-col justify-center text-center retro py-12"
         >
           <div className="m-6">
-            <p className="mb-6 text-3xl uppercase">Frequently Asked Questions</p>
+            <p className="mb-6 text-3xl uppercase">
+              Frequently Asked Questions
+            </p>
             <div class="flex justify-center">
               <Faq />
             </div>
@@ -200,7 +234,6 @@ export default function App() {
             Slack
           </a>{" "}
           |{" "}
-          
           <a
             href="https://www.youtube.com/@HackClubHQ"
             target="_blank"
@@ -267,7 +300,10 @@ const FaqCard = (props) => {
       <div className="p-5 h-full">
         <div className="h-full bg-black/40 p-3 flex flex-col justify-center">
           <p className="mb-2 text-lg uppercase retro">{faqItem.question}</p>
-          <p className="neuebit text-xl text-justify leading-6" dangerouslySetInnerHTML={{ __html: faqItem.answer }}></p>
+          <p
+            className="neuebit text-xl text-justify leading-6"
+            dangerouslySetInnerHTML={{ __html: faqItem.answer }}
+          ></p>
         </div>
       </div>
     </div>
