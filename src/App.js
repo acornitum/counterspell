@@ -74,6 +74,7 @@ import Locations from "./components/Locations";
 import Cards from "./components/Cards";
 import Steps from "./components/Steps";
 import About from "./components/About";
+import Schedule from "./components/Schedule";
 
 const faqBkgrs = [faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8];
 
@@ -103,14 +104,13 @@ export default function App() {
 
         <Cards />
 
+        <Steps />
+
         <Organize />
 
         <Locations />
 
         <div class="border-t-4 border-pink border-dashed"></div>
-
-
-        <Steps />
 
         <div className="relative">
           <img
@@ -125,71 +125,6 @@ export default function App() {
             alt=""
             className="absolute -z-10 -mt-24 sm:-mt-32 lg:mt-0 w-[200px] sm:w-[300px] xl:w-[400px] h-auto -right-12 sm:right-0"
           />
-        </div>
-
-        <p className="text-6xl flex justify-center neuebit text-green">
-          Schedule
-        </p>
-        <div className="flex justify-center text-center m-5 mt-8 sm:mt-20 xl:mt-4 my-4 mb-24 neuebit">
-          <table
-            class="table-auto"
-            className="text-2xl xs:text-3xl sm:text-5xl text-left border-separate border-spacing-y-1 xs:border-spacing-y-4 "
-          >
-            <tbody>
-              <tr>
-                <td>Doors open </td>
-                <td>11:00 AM</td>
-              </tr>
-              <tr>
-                <td>Opening ceremony</td>
-                <td>12:00 PM</td>
-              </tr>
-              <tr>
-                <td>Lunch</td>
-                <td>12:30 PM</td>
-              </tr>
-              <tr>
-                <td>Start working on your game! &nbsp; &nbsp; &nbsp;</td>
-                <td>1:00 PM</td>
-              </tr>
-              <tr>
-                <td>Gamedev workshop 1</td>
-                <td>2:00 PM</td>
-              </tr>
-              <tr>
-                <td>Activity 1</td>
-                <td>4:00 PM</td>
-              </tr>
-              <tr>
-                <td>Gamedev workshop 2</td>
-                <td>4:00 PM</td>
-              </tr>
-              <tr>
-                <td>Dinner</td>
-                <td>6:00 PM</td>
-              </tr>
-              <tr>
-                <td>Lightning talks</td>
-                <td>8:00 PM</td>
-              </tr>
-              <tr>
-                <td>Midnight Suprise</td>
-                <td>12:00 AM</td>
-              </tr>
-              <tr>
-                <td>Breakfast</td>
-                <td>8:00 AM</td>
-              </tr>
-              <tr>
-                <td>Game demos!</td>
-                <td>10:30 AM</td>
-              </tr>
-              <tr>
-                <td>Closing ceremony</td>
-                <td>12:00 PM</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <div

@@ -5,8 +5,8 @@ export default function About() {
   return (
     <div class="flex justify-center neuebit text-4xl py-24">
       <div className="max-w-8xl space-y-12">
-        <h2 className="text-center retro uppercase text-6xl text-whitepurp">
-          Make games, <span className="text-pink">win prizes</span>
+        <h2 className="text-center retro uppercase text-5xl text-whitepurp pb-6">
+          Make games, <span className="text-pink">meet cool people</span>
         </h2>
         <div className="grid grid-cols-1 xl:grid-cols-2 grid-rows-2 gap-12 leading-[3rem] tracking-wider mx-12 2xl:mx-0">
           <div className="row-span-2 border-4 border-pink border-dashed p-12 space-y-12">
