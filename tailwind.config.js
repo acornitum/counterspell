@@ -10,7 +10,7 @@ module.exports = {
         blue: '#5BE2FA',
         lightpurp: '#6370F5',
         darkpurp: '#443D87',
-        dark: '#0A081E'
+        dark: '#202F53'
       },
       screens: {
         'xs': '480px',
