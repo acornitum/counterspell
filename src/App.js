@@ -98,7 +98,7 @@ export default function App() {
   return (
     <div>
       <div
-        className="fixed bottom-0 left-0 right-0 h-44 pointer-events-none bg-gradient-to-t from-darker from-20% to-transparent z-10 motion-safe:transition-all"
+        className="fixed bottom-0 left-0 right-0 h-36 pointer-events-none bg-gradient-to-t from-darker from-20% to-transparent z-10 motion-safe:transition-all"
         style={{ opacity: docHeight - scrollPos < 1000 ? "0" : "100" }}
       ></div>
       <div
