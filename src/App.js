@@ -150,11 +150,11 @@ export default function App() {
 
       <a
         className="hidden sm:block text-white fixed top-4 right-4 retro bg-pink py-2 px-3 uppercase z-50 hover:scale-105 hover:text-white"
-        href="https://hack.club/counterspell-signup"
+        href="https://counterspell.hackclub.com"
         target="_blank"
         style={{ textDecorationLine: "none" }}
       >
-        Sign up to organize
+        Main Counterspell Site
       </a>
 
       <Hero />

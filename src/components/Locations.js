@@ -20,10 +20,13 @@ export default function Locations() {
 
   return (
     <div className="neuebit py-24 px-6 bg-darker text-center retro relative">
-      <p className="text-3xl uppercase">
-        It's happening all around you
+      <p className="text-2xl uppercase mb-4">
+        This is one of 200+ counterspell events happening worldwide!
       </p>
-      <div class="flex justify-center pt-24">
+      <p className="text-3xl uppercase">
+        Other locations include:
+      </p>
+      <div class="flex justify-center pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center text-2xl max-w-5xl w-full gap-8">
           {cities.map((city) => (
             <p className="lg:odd:text-left lg:even:text-right">{city}</p>
