@@ -39,11 +39,12 @@ export default function Steps() {
           </div>
           <div className="py-10 text-xl uppercase retro space-y-4 mx-6">
             <p className="">
-              This Counterspell event will go on for{" "}
-              <span className="text-pink">24 hours</span>!
+              Most Counterspell events will go on for{" "}
+              <span className="text-pink">24 hours</span> (unless explicitly
+              stated)
             </p>
             <p className="">
-              Here's a rough schedule so you know what to expect:
+              Here's a rough schedule so you know what to expect!
             </p>
           </div>
         </div>
